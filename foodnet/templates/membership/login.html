@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="row">
+	<div col-lg-12 text-center>
+		<h1>{{title}}</h1>
+	</div>
+</div>
+
+<div class="row">
+<div class="col-lg-8 col-lg-offset-2">
+<form action="{% url 'log_in' %}" method="post">
+	<fieldset class="control-group">
+		{% csrf_token %}
+		{% for field in form %}
+		<div class="row control-group">
+		<div class="form-group col-xs-1">
+			<label class="control-label" for="id_{{ field.name }}">{{ field.label }}</label>
+			<div class="controls">
+				{{ field }}
+				<p class="help-text">{{ field.help_text }}</p>
+			</div>
+		</div>
+		</div>
+		{% endfor %}
+		<input type="submit" value="Submit" />
+	</fieldset>
+</form>
+</div>
+</div>
+{% endblock%}

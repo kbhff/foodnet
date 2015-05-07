@@ -8,14 +8,17 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.8/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.contrib.messages import constants as messages_constants
 
 
 BASE_DIR = os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))
 )
 
+MESSAGE_TAGS = {
+    messages_constants.ERROR: 'danger',
+}
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.8/howto/deployment/checklist/
@@ -30,6 +33,9 @@ SECRET_KEY = os.getenv(
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+LOGIN_URL = '/membership/login/'
+LOGOUT_URL = '/membership/logout/'
 
 
 # Application definition
@@ -194,3 +200,5 @@ LOGGING = {
         }
     }
 }
+
+AUTH_USER_MODEL = 'membership.FoodnetUser'

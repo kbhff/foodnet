@@ -2,14 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <link rel="stylesheet"
-	href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 <link rel="stylesheet"
-	href="{% static "css/foodnet.css" %}">
+    href="{% static "css/foodnet.css" %}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{title}}</title>
@@ -17,11 +20,75 @@
 </head>
 <body>
 
-	<div id="container">{% block content %} {% endblock %}</div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
 
-	<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" 
+                data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                </button>
+                <a class="navbar-brand" href="/">FoodNet</a>
+            </div>
 
-	<script
-		src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="">
+                    	{% if request.user.is_authenticated %}
+                        <a href="{% url 'log_out' %}">Log-out</a>
+                        {% else %}
+                        <a href="{% url 'log_in' %}">Log-in</a>
+                        {% endif %}
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <span class="name">FoodNet</span>
+                        <hr />
+                        
+                        <span class="skills">A membership system for food coops and other local community projects.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Messages -->
+    <section id="messages">
+    {% if messages %}
+        {% for message in messages %}
+        <!-- {{ message.level }} -->
+        <div class="alert alert-{{ message.tags }} alert-dismissible"
+            role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span></button>
+            {{ message }}
+        </div>
+        {% endfor %}
+    {% endif %}
+    </section>
+
+
+    <section id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">{% block content %}{% endblock %}</div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>

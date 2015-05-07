@@ -8,4 +8,6 @@ from foodnet.membership import views
 
 urlpatterns = [
     url(r'profile/$', views.profile, name="profile"),
+    url(r'login/$', views.log_in, name="log_in"),
+    url(r'logout/$', views.log_out, name="log_out"),
 ]
