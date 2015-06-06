@@ -57,6 +57,7 @@ def invite(request):
 
 @login_required
 def departments_accounts(request, department_name=None):
+    # TODO: pagination of user profiles
     assert department_name is not None
     department = Department.objects.get(shortname=department_name)
     user = UserProfile.get_for_user(request.user)
@@ -69,6 +70,7 @@ def departments_accounts(request, department_name=None):
 
 @login_required
 def admin_profile(request, user_id=None):
+    # TODO: actually implement a profile form
     assert user_id is not None
     print("admin_profile edit for {}".format(user_id))
     admin_user = UserProfile.get_for_user(request.user)
