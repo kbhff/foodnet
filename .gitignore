@@ -75,3 +75,9 @@ target/
 /foodnet/static
 foodnet/settings/pawel.py
 
+# PyCharm
+.idea
+
+# local.py
+foodnet/settings/local.py
+ 
