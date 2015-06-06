@@ -102,7 +102,7 @@ class Department(models.Model):
     def accounts(self):
         out = []
         for member in self.members.all():
-            out.append(UserProfile.objects.get(member=member))
+            out += member.userprofile_set.all()
         return out
 
 
