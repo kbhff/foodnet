@@ -53,6 +53,18 @@ class UserProfile(models.Model):
             return True
         return False
 
+    def has_admin_permission(self, department):
+        return self.departmentadministrator_set.filter(department=department).exists()
+
+    def can_be_edited_by(self, user_profile):
+        # can be edited by user_profile if the user_profile is an admin of
+        # the self.member.department department
+        departments = self.member.department_set.all()
+        for department in departments.iterator():
+            if user_profile.has_admin_permission(department=department):
+                return True
+        return False
+
     @classmethod
     def get_for_user(cls, user):
         return cls.objects.get(user_id=user.id)
@@ -94,6 +106,13 @@ class Department(models.Model):
     def __str__(self):
         return u'{0}'.format(self.name)
 
+    @property
+    def accounts(self):
+        out = []
+        for member in self.members.all():
+            out += member.userprofile_set.all()
+        return out
+
 
 class DepartmentMembership(models.Model):
     member = models.ForeignKey(Member)
@@ -104,6 +123,12 @@ class DepartmentMembership(models.Model):
 
     class Meta:
         unique_together = (('member', 'department'),)
+
+
+class DepartmentAdministrator(models.Model):
+    department = models.ForeignKey(Department)
+    admin = models.ForeignKey(UserProfile)
+    created = models.DateTimeField(auto_now_add=True)
 
 
 class Invitation(models.Model):

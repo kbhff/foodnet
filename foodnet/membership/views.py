@@ -2,7 +2,7 @@
 import logging
 
 from django.db import IntegrityError
-from django.http import Http404, HttpResponsePermanentRedirect
+from django.http import Http404, HttpResponsePermanentRedirect, HttpResponseForbidden, HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.contrib import messages
@@ -18,7 +18,7 @@ from allauth.account.views import sensitive_post_parameters_m,\
 from foodnet.common.views import LoginRequiredMixinView
 from .forms import (ProfileForm, InviteForm, AcceptInvitationForm,
     NewUserSetPasswordForm)
-from .models import Invitation, User, UserProfile
+from .models import Invitation, User, UserProfile, Department
 from .utils import create_verified_user
 
 
@@ -53,6 +53,31 @@ def invite(request):
         'title': "send invitation",
     }
     return render(request, 'foodnet/membership/invite.html', ctx)
+
+
+@login_required
+def departments_accounts(request, department_name=None):
+    # TODO: pagination of user profiles
+    assert department_name is not None
+    department = Department.objects.get(shortname=department_name)
+    user = UserProfile.get_for_user(request.user)
+    if not user.has_admin_permission(department=department):
+        return HttpResponseForbidden(content="Not a department admin.")
+
+    ctx = {'accounts': department.accounts}
+    return render(request, 'foodnet/department/accounts.html', ctx)
+
+
+@login_required
+def admin_profile(request, user_id=None):
+    # TODO: actually implement a profile form
+    assert user_id is not None
+    print("admin_profile edit for {}".format(user_id))
+    admin_user = UserProfile.get_for_user(request.user)
+    edited_user = UserProfile.objects.get(id=user_id)
+    if not edited_user.can_be_edited_by(admin_user):
+        return HttpResponseForbidden(content="Current user cannot edit profile")
+    return HttpResponse(content="Can edit!")
 
 
 class AlreadyAcceptedInvitationException(Exception):
