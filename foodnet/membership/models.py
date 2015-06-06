@@ -56,6 +56,14 @@ class UserProfile(models.Model):
     def has_admin_permission(self, department):
         return self.departmentadministrator_set.filter(department=department).exists()
 
+    def can_be_edited_by(self, user_profile):
+        # can be edited by user_profile if the user_profile is an admin of
+        # the self.member.department department
+        departments = self.member.department_set.all()
+        for department in departments.iterator():
+            if user_profile.has_admin_permission(department=department):
+                return True
+        return False
 
     @classmethod
     def get_for_user(cls, user):

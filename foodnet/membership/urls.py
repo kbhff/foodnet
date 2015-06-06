@@ -31,5 +31,9 @@ urlpatterns = [
         views.departments_accounts,
         name='department_accounts'),
 
+    url(r'^admin_profile/(?P<user_id>[0-9]{1,100})$',
+        views.admin_profile,
+        name='admin_profile'),
+
     url(r'^accounts/', include('allauth.urls')),
 ]

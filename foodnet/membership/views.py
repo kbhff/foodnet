@@ -2,7 +2,7 @@
 import logging
 
 from django.db import IntegrityError
-from django.http import Http404, HttpResponsePermanentRedirect, HttpResponseForbidden
+from django.http import Http404, HttpResponsePermanentRedirect, HttpResponseForbidden, HttpResponse
 from django.shortcuts import render, redirect, get_object_or_404
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.contrib import messages
@@ -65,6 +65,17 @@ def departments_accounts(request, department_name=None):
 
     ctx = {'accounts': department.accounts}
     return render(request, 'foodnet/department/accounts.html', ctx)
+
+
+@login_required
+def admin_profile(request, user_id=None):
+    assert user_id is not None
+    print("admin_profile edit for {}".format(user_id))
+    admin_user = UserProfile.get_for_user(request.user)
+    edited_user = UserProfile.objects.get(id=user_id)
+    if not edited_user.can_be_edited_by(admin_user):
+        return HttpResponseForbidden(content="Current user cannot edit profile")
+    return HttpResponse(content="Can edit!")
 
 
 class AlreadyAcceptedInvitationException(Exception):
