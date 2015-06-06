@@ -27,5 +27,9 @@ urlpatterns = [
         views.sets_new_user_password,
         name='new_member_set_password'),
 
+    url(r'^departments/(?P<department_name>[\w\d\-]{1,10})/accounts$',
+        views.departments_accounts,
+        name='department_accounts'),
+
     url(r'^accounts/', include('allauth.urls')),
 ]

@@ -53,6 +53,10 @@ class UserProfile(models.Model):
             return True
         return False
 
+    def has_admin_permission(self, department):
+        return self.departmentadministrator_set.filter(department=department).exists()
+
+
     @classmethod
     def get_for_user(cls, user):
         return cls.objects.get(user_id=user.id)
@@ -94,6 +98,13 @@ class Department(models.Model):
     def __str__(self):
         return u'{0}'.format(self.name)
 
+    @property
+    def accounts(self):
+        out = []
+        for member in self.members.all():
+            out += member.userprofile_set.all()
+        return out
+
 
 class DepartmentMembership(models.Model):
     member = models.ForeignKey(Member)
@@ -104,6 +115,12 @@ class DepartmentMembership(models.Model):
 
     class Meta:
         unique_together = (('member', 'department'),)
+
+
+class DepartmentAdministrator(models.Model):
+    department = models.ForeignKey(Department)
+    admin = models.ForeignKey(UserProfile)
+    created = models.DateTimeField(auto_now_add=True)
 
 
 class Invitation(models.Model):

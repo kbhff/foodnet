@@ -1,0 +1,21 @@
+{% extends "foodnet/base.html" %}
+{% load bootstrap3 %}
+{% block content %}
+
+<div class="container">
+<div class="row">
+    <div class="col-md-3">First Name</div>
+    <div class="col-md-3">Last Name</div>
+    <div class="col-md-3">Email</div>
+    <div class="col-md-3">Edit</div>
+</div>
+{% for acc in accounts %}
+<div class="row">
+    <div class="col-md-3">{{ acc.user.first_name }}</div>
+    <div class="col-md-3">{{ acc.user.last_name }}</div>
+    <div class="col-md-3">{{ acc.user.email }}</div>
+    <div class="col-md-3">Edit</div>
+</div>
+{% endfor %}
+</div>
+{% endblock%}
