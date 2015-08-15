@@ -19,6 +19,10 @@ urlpatterns = [
         views.order_detail,
         name="order_detail"),
 
+    url(r'order-info/(?P<pk>' + uuid_re_param + ')/$',
+        views.order_info,
+        name="order_info"),
+
     url(r'payment-accepted/(?P<pk>' + uuid_re_param + ')/$',
         views.payment_accepted,
         name="payment_accepted"),

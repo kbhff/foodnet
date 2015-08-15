@@ -44,6 +44,15 @@ def orders_list(request):
 
 
 @login_required
+def order_info(request, pk=None):
+    order = get_object_or_404(Order, pk=pk)
+    ctx = {
+        'orders': [order, ]
+    }
+    return render(request, 'eggplant/payments/orders_list.html', ctx)
+
+
+@login_required
 @user_passes_test(is_active_account_owner,
                   login_url='eggplant:payments:payments_home')
 def create_order_for_fee(request, fee_id):

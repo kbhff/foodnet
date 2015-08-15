@@ -37,7 +37,7 @@ class Order(models.Model):
     objects = OrderManager()
 
     def get_absolute_url(self):
-        return reverse('payments:order_details', kwargs={'pk': self.pk})
+        return reverse('payments:order_info', kwargs={'pk': self.pk})
 
     def get_last_payment_status(self):
         payments = self.payments.all().order_by('-created_on')[:1]
