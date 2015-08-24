@@ -12,19 +12,6 @@
 <h1 class="page-header">{% trans "Eggplant Dashboard" %}</h1>
 <p class="lead">{% trans "A membership system for food coops and other local community projects." %}</p>
 
-<div class="btn-group">
-{% if perms.membership.can_invite %}
-
-  <a href="{% url 'eggplant:membership:invite' %}" role="button" class="btn btn-default">
-    {% trans "Send invitation" %}
-  </a>
-{% endif %}
-
-{% if user.is_authenticated %}
-  <a href="{% url 'eggplant:payments:payments_home' %}" role="button" class="btn btn-default">
-  {% trans "Payments" %}</a>
-{% endif %}
-</div>
 </div>
 </div>
 

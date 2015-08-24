@@ -1,0 +1,37 @@
+{% extends "eggplant/core/base.html" %}
+{% load bootstrap3 %}
+{% load i18n %}
+{% load membership_tags %}
+{% load cart_tags %}
+{% block content %}
+
+<div class="row">
+	<div class="col-sm-12 col-span-3">
+	<h1 class="page-header">{% trans 'Your basket' %}</h1>
+	</div>
+</div>
+
+{% if items %}
+<div class="row">
+  <div class="col-sm-10 text-right">
+<a class="btn btn-primary" href="{% url 'eggplant:webshop:checkout' %}">checkout</a>
+	</div>
+</div>
+{% endif %}
+
+{% for item in items %}
+<div class="row">
+  <div class="col-sm-2">{{item.quantity}}</div>
+  <div class="col-sm-2 text-left">{{item.product.title}}</div>
+  <div class="col-sm-2 text-left">for {{item.delivery_date}}</div>
+  <div class="col-md-2">
+	{% cart_action 'remove' product_id=item.product.id quantity=1 delivery_date=item.delivery_date %}
+  </div>
+</div>
+
+{% empty %}
+	<div class="row">
+		<div class="col-md-10 col-span-5">You don&#39;t have any items in your basket.</div>
+	</div>
+{% endfor %}
+{% endblock%}

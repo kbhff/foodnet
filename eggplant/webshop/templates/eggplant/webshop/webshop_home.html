@@ -1,1 +1,67 @@
-webshop home
+{% extends "eggplant/core/base.html" %}
+{% load bootstrap3 %}
+{% load i18n %}
+{% load staticfiles %}
+{% load membership_tags %}
+{% load partition_slice %}
+{% load cart_tags %}
+
+{% block app_css %}
+	<link href="{% static 'css/bootstrap-datepicker3.min.css' %}"
+		rel="stylesheet" />
+{% endblock%}
+{% block app_js %}
+	<script src="{% static 'js/bootstrap-datepicker.min.js' %}"></script>
+	<script src="{% static 'js/locales/bootstrap-datepicker.da.min.js' %}"></script>
+	<script src="{% static 'js/locales/bootstrap-datepicker.en-GB.min.js' %}"></script>
+	<script type=text/javascript>
+var $jq = jQuery.noConflict();
+$jq(function() {
+    $jq('.datepicker').datepicker({format:'yyyy-mm-dd'});
+});
+	</script>
+{% endblock%}
+
+{% block content %}
+
+<div class="row">
+	<div class="col-sm-12 col-span-3">
+	<h1 class="page-header">All products:</h1>
+	</div>
+</div>
+
+{% with user|is_active_account_owner as user_is_owner %}
+
+{% if products %}
+<div class="row">
+<div class="col-md-12 text-right">
+	<a class="btn btn-primary" href="{% url 'eggplant:webshop:cart_details' %}">your basket</a>
+	{% if basket_items %}
+	<a class="btn btn-primary" href="{% url 'eggplant:webshop:checkout' %}">go to checkout</a>
+	{% endif %}
+</div>
+</div>
+<br />
+{% endif %}
+
+{% for sublist in products|partition:"3" %}
+<div class="row">
+	{% for product in sublist %}
+	<div class="col-md-3">
+		<span class="thumbnail"><img src="{{product.image.url}}" /></span>
+		<p class="left"><strong>{{ product.title }}</strong></p>
+		<p class="text-left">{{product.description}}</p>
+		<p class="text-left">{{product.price}} kroner</p>
+		<p>
+			{% cart_action 'add' product_id=product.id %}
+		</p>
+	</div>
+	{% endfor %}
+</div>
+{% empty %}
+	<div class="row">
+		<div class="col-md-4 col-span-5"><p>There are no products to purchase.</p></div>
+	</div>
+{% endfor %}
+{% endwith %}
+{% endblock%}

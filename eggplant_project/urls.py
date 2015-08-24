@@ -15,6 +15,8 @@ eggplant_urls = [
                                  namespace='membership')),
     url(r'^payments/', include('eggplant.payments.urls',
                                namespace='payments')),
+    url(r'^webshop/', include('eggplant.webshop.urls',
+                               namespace='webshop')),
     url(r'^', include('eggplant.dashboard.urls',
                       namespace='dashboard')),
 ]

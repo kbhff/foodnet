@@ -75,6 +75,7 @@ INSTALLED_APPS = (
     'eggplant.membership',
     'eggplant.dashboard',
     'eggplant.payments',
+    'eggplant.webshop',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -258,3 +259,9 @@ GETPAID_BACKENDS_SETTINGS = {
 
 GETPAID_SUCCESS_URL_NAME = 'eggplant:payments:payment_accepted'
 GETPAID_FAILURE_URL_NAME = 'eggplant:payments:payment_rejected'
+
+CURRENCIES = (
+    ('DKK', 'DKK'),
+    ('PLN', 'PLN'),
+    ('GBP', 'GBP'),
+)
