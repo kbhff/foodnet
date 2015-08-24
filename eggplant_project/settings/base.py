@@ -75,6 +75,7 @@ INSTALLED_APPS = (
     'eggplant.membership',
     'eggplant.dashboard',
     'eggplant.payments',
+    'eggplant.webshop',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -152,6 +153,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
 
 LOGGING = {
     'version': 1,
@@ -256,3 +259,9 @@ GETPAID_BACKENDS_SETTINGS = {
 
 GETPAID_SUCCESS_URL_NAME = 'eggplant:payments:payment_accepted'
 GETPAID_FAILURE_URL_NAME = 'eggplant:payments:payment_rejected'
+
+CURRENCIES = (
+    ('DKK', 'DKK'),
+    ('PLN', 'PLN'),
+    ('GBP', 'GBP'),
+)

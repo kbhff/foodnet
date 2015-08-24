@@ -8,7 +8,14 @@
 
 body
 {
-    padding-top: 50px; /* Space because of static navbar at top */
+    padding-top: 20px; /* Space because of static navbar at top */
+    padding-bottom: 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857;
+    margin: 0;
 }
 
 

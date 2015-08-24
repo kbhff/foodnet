@@ -1,0 +1,65 @@
+{% extends "eggplant/core/base.html" %}
+{% load bootstrap3 %}
+{% load i18n %}
+{% load membership_tags %}
+{% block content %}
+
+<div class="row">
+	<div class="col-md-12 col-span-3">
+		<h3 class="page-header">{% trans 'Your cart' %}</h3>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3"><strong>Product</strong></div>
+	<div class="col-md-3"><strong>Delivery date</strong></div>
+	<div class="col-md-3"><strong>Delivered to:</strong></div>
+	<div class="col-md-3"><strong>Price</strong></div>
+</div>
+
+{% for item in items %}
+<div class="row">
+  <div class="col-md-3 text-left">{{item.product.title}}</div>
+  <div class="col-md-3">{{item.delivery_date|date:"d/m - Y"|default:"-"}}</div>
+  <div class="col-md-3">{{item.delivered_to}}</div>
+  <div class="col-md-3">{{item.product.price}} DKK</div>
+</div>
+{% endfor %}
+
+<div class="row">
+	<hr>
+	<div class="col-md-4 text-left">
+	<strong>Total</strong>
+	</div>
+	<div class="col-md-4 text-right">
+		<strong>{{basket.get_total_amount}}</strong>
+	</div>
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="col-md-8 text-left">
+	<p>The above is your order. Please look it through it includes the items
+	you want to buy. When you click "Go to payment" below, you will be sent
+	to a secure page at ePay.dk, where you will enter your payment information
+	and accept the payment.</p>
+	<p>We accept the following payment methods: Dankort, Visa/Dankort.</p>
+	</div>
+</div>
+<br />
+<br />
+<br />
+<div class="row">
+<div class="col-md-4 text-left">
+	<a class="btn btn-success" href="{% url 'eggplant:webshop:webshop_home' %}" >Go to webshop</a>
+</div>
+<div class="col-md-4 text-right">
+	<form action="{% url 'eggplant:webshop:checkout' %}" method="POST">
+		{% csrf_token %}
+		<button name="submit" class="btn btn-success">Go to Payment</button>
+	</form>
+</div>
+</div>
+
+{% endblock%}

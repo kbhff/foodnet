@@ -76,3 +76,5 @@ target/
 # collected static files
 /staticfiles/*
 
+/media/*
+

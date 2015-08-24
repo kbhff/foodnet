@@ -5,3 +5,4 @@ django-admin-bootstrapped==2.5.0
 django-bootstrap3==5.4.0
 django-recaptcha==1.0.4
 django-getpaid==1.7.2
+Pillow==2.9.0

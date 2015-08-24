@@ -13,25 +13,13 @@ from getpaid.forms import PaymentMethodForm
 from eggplant.common.views import LoginRequiredMixinView
 from eggplant.membership.utils import is_active_account_owner
 from .models import Order
-from .models import FeeConfig
 
 log = logging.getLogger(__name__)
 
 
 @login_required
 def payments_home(request):
-    ctx = {
-    }
-    return render(request, 'eggplant/payments/payments_home.html', ctx)
-
-
-@login_required
-def fees_list(request):
-    fees = FeeConfig.objects.all()
-    ctx = {
-        'fees': fees
-    }
-    return render(request, 'eggplant/payments/fees_list.html', ctx)
+    return redirect('eggplant:payments:orders_list')
 
 
 @login_required
@@ -44,12 +32,12 @@ def orders_list(request):
 
 
 @login_required
-@user_passes_test(is_active_account_owner,
-                  login_url='eggplant:payments:payments_home')
-def create_order_for_fee(request, fee_id):
-    fee = get_object_or_404(FeeConfig, id=fee_id)
-    order = Order.objects.create_for_fee(request.user, fee)
-    return redirect('eggplant:payments:order_detail', pk=str(order.id))
+def order_info(request, pk=None):
+    order = get_object_or_404(Order, pk=pk)
+    ctx = {
+        'orders': [order, ]
+    }
+    return render(request, 'eggplant/payments/orders_list.html', ctx)
 
 
 class OrderView(LoginRequiredMixinView, DetailView):

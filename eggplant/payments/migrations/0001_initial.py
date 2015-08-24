@@ -14,17 +14,6 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='FeeConfig',
-            fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
-                ('name', models.CharField(max_length=100, unique=True)),
-                ('amount', models.DecimalField(default=0, max_digits=8, decimal_places=2)),
-                ('application', models.CharField(max_length=1, choices=[('o', 'one off'), ('m', 'monthly'), ('q', 'quaterly'), ('a', 'annually')])),
-                ('currency', models.CharField(max_length=3, default='DKK', choices=[('DKK', 'DKK'), ('PLN', 'PLN'), ('GBP', 'GBP')])),
-                ('enabled', models.BooleanField(default=True)),
-            ],
-        ),
-        migrations.CreateModel(
             name='Order',
             fields=[
                 ('id', models.UUIDField(serialize=False, default=uuid.uuid4, editable=False, primary_key=True)),
