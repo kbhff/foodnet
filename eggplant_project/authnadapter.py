@@ -34,18 +34,3 @@ class EggplantAccountAdapter(DefaultAccountAdapter):
             accepted=True
         ).count()
         return bool(ret)
-
-    def clean_email(self, email):
-        """
-        Validates an email value. Dynamically restricts what email addresses
-        can be chosen.
-        """
-        email = forms.fields.EmailField().clean(value=email)
-        is_taken = (
-            EmailAddress.objects.filter(email__iexact=email).exists() or
-            User.objects.filter(email__iexact=email).exists()
-        )
-        if is_taken:
-            raise forms.ValidationError(_("This email is already taken. "
-                                          "Please choose another."))
-        return email
