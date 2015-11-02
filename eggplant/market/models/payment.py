@@ -13,7 +13,7 @@ class Payment(models.Model):
         max_digits=12,
         decimal_places=2,
     )
-    account = models.ForeignKey('membership.Account')
+    account = models.ForeignKey('accounts.Account')
     created = models.DateTimeField(auto_now_add=True, null=False,
                                    db_index=True)
 

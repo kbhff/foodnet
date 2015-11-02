@@ -1,10 +1,9 @@
 from django.test import TestCase
-from django.utils import timezone
 from django.core.urlresolvers import reverse
 from allauth.account.models import EmailAddress
 
-from eggplant.membership.models import UserProfile
-from eggplant.membership.factories import (
+from eggplant.profiles.models import UserProfile
+from eggplant.factories import (
     UserFactory,
     AccountFactory,
     DepartmentFactory,
@@ -21,10 +20,8 @@ class TestPayments(TestCase):
             address=' test address',
             postcode='test postcode',
             city='test city',
-            sex='0',
+            sex=UserProfile.FEMALE,
             tel='test tel',
-            date_of_birth=timezone.now(),
-            privacy=True,
         )
         AccountFactory.create(department=department, user_profiles=[self.user_profile])
         self.test_user.set_password('pass')

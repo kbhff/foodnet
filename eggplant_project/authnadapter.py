@@ -8,7 +8,7 @@ from django.contrib.auth.models import User
 from allauth.account.models import EmailAddress
 from allauth.account.adapter import DefaultAccountAdapter
 
-from eggplant.membership.models import DepartmentInvitation
+from eggplant.invitations.models import DepartmentInvitation
 
 
 log = logging.getLogger(__name__)

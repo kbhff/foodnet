@@ -76,5 +76,7 @@ target/
 # collected static files
 /staticfiles/*
 
+# PyCharm
+.idea
 /media/*
 

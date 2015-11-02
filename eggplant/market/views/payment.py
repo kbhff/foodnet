@@ -9,7 +9,7 @@ from django.shortcuts import get_object_or_404, redirect, render
 
 from getpaid.forms import PaymentMethodForm
 
-from eggplant.common.views import LoginRequiredMixinView
+from eggplant.core.views import LoginRequiredMixin
 from ..models import Payment
 
 log = logging.getLogger(__name__)
@@ -33,7 +33,7 @@ def payment_info(request, pk=None):
     return render(request, 'eggplant/market/payment_list.html', ctx)
 
 
-class PaymentView(LoginRequiredMixinView, DetailView):
+class PaymentView(LoginRequiredMixin, DetailView):
     model = Payment
     template_name = 'eggplant/market/payment_detail.html'
 

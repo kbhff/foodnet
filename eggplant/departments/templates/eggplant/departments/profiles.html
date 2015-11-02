@@ -1,0 +1,38 @@
+{% extends "eggplant/core/base.html" %}
+{% load bootstrap3 %}
+{% block content %}
+
+<div class="container">
+<div class="row">
+    <div class="col-md-3">First Name</div>
+    <div class="col-md-3">Last Name</div>
+    <div class="col-md-3">Email</div>
+    <div class="col-md-3">Edit</div>
+</div>
+{% for acc in profiles %}
+<div class="row">
+    <div class="col-md-3">{{ acc.user.first_name }}</div>
+    <div class="col-md-3">{{ acc.user.last_name }}</div>
+    <div class="col-md-3">{{ acc.user.email }}</div>
+    <div class="col-md-3"><a href="/membership/admin_profile/{{ acc.id }}">edit</a></div>
+</div>
+{% endfor %}
+<ul class="pagination pagination-centered">
+    {% if profiles.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    {% else %}
+        <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+    {% endif %}
+
+    {% for i in profiles.paginator.page_range %}
+        <li {% if profiles.number == i %} class="active" {% endif %}><a href="?page={{i}}">{{i}}</a></li>
+    {% endfor %}
+
+    {% if profiles.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    {% else %}
+        <li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+    {% endif %}
+</ul>
+</div>
+{% endblock%}

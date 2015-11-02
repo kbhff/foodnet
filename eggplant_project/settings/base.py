@@ -45,7 +45,7 @@ AUTHENTICATION_BACKENDS = (
     'allauth.account.auth_backends.AuthenticationBackend',
 
     # invited users only
-    'eggplant.membership.auth_backends.InvitationBackend',
+    'eggplant.invitations.auth_backends.InvitationBackend',
 )
 
 
@@ -71,10 +71,14 @@ INSTALLED_APPS = (
     'getpaid.backends.epaydk',
 
     # Project apps.
+    'eggplant.accounts',
     'eggplant.core',
-    'eggplant.membership',
     'eggplant.dashboard',
+    'eggplant.departments',
+    'eggplant.invitations',
     'eggplant.market',
+    'eggplant.permissions',
+    'eggplant.profiles',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -86,7 +90,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'eggplant.membership.middleware.NewUserForceProfileMiddleware',
+    'eggplant.profiles.middleware.NewUserForceProfileMiddleware',
     'getpaid.middleware.SetRemoteAddrFromForwardedForMiddleware',
 )
 

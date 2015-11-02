@@ -9,7 +9,7 @@
             <ul class="nav navbar-nav">
 					{% if perms.membership.can_invite %}
 					<li>
-					  <a href="{% url 'eggplant:membership:invite' %}">
+					  <a href="{% url 'eggplant:invitations:invite' %}">
 					    {% trans "Send invitation" %}
 					  </a>
 				    </li>
@@ -36,7 +36,7 @@
                             <ul class="dropdown-menu">
                                  <li><a href="{% url 'eggplant:dashboard:home' %}">Home</a></li>
                                 {% if user.is_authenticated %}
-                                	<li><a href="{% url 'eggplant:membership:profile' %}">Profile</a></li>
+                                	<li><a href="{% url 'eggplant:profiles:profile' %}">Profile</a></li>
                                 	<li><a href="{% url 'account_logout' %}">Log out</a></li>
                                 {% else %}
                                 	<li><a href="{% url 'account_login' %}">Log in</a></li>

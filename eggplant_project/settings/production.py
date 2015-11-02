@@ -1,6 +1,5 @@
-import os
 import dj_database_url
-from .base import *
+from .base import *  # @UnusedWildImport
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
