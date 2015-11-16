@@ -11,6 +11,10 @@ Applications inside ``eggplant/`` are interdependent, except ``core`` which
 should not depend on anything else and ``permissions`` which all other
 applications are expected to use.
 
+.. note::
+   Test of the pending application structure: Where do we put a new
+   Membership model?
+
  - ``accounts`` - Administration and user pages related to accounts, being
    everything that has to do with user's transactions inside the market.
  - ``core`` - an application with models that all other applications may depend
@@ -19,12 +23,11 @@ applications are expected to use.
  - ``departments`` - Administration logic regarding a department such as shifts.
  - ``invitations`` - Sending of invitation emails to create new user profiles
    that join accounts, departments etc.
- - ``membership`` - Extends from Django allauth and contains the models of
-   memberships and their organizations.
  - ``market`` - Contains everything related to paying for stuff, invoicing,
    and creating and managing goods such as grocery bags.
  - ``permissions`` - Models and decorators for permissions, **dependency of others**
- - ``profiles`` - User information
+ - ``profiles`` - User information, uses django-allauth for much of the
+   view-related stuff.
  
  
 Coupling
