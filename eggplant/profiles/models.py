@@ -48,6 +48,7 @@ class UserProfile(models.Model):
         blank=True
     )
     photo = models.ImageField(blank=True, null=True)
+    active = models.BooleanField(default=True)
 
     created = models.DateTimeField(auto_now_add=True, editable=False)
     changed = models.DateTimeField(auto_now=True, editable=False)

@@ -107,6 +107,7 @@ class Profile(LoginRequiredMixin, FormView):
         self.object.tel = form.cleaned_data['tel']
         self.object.sex = form.cleaned_data['sex']
         self.object.photo = form.cleaned_data['photo']
+        self.object.active = form.cleaned_data['active']
         result = self.object.save()
 
         msg = "Your profile has been successfully updated."
