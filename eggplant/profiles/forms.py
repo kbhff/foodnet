@@ -21,12 +21,17 @@ class ProfileForm(forms.Form):
     tel = forms.CharField(label='Phone', required=True, max_length=15)
     sex = forms.ChoiceField(choices=UserProfile.SEX_CHOICES, required=False)
     photo = forms.ImageField(label='Photo', required=False)
+    active = forms.BooleanField(label='Active Member', required=False)
 
 
 class SignupForm(ProfileForm):
     email = forms.EmailField(required=True)
     password1 = SetPasswordField(label="Password", required=True)
     password2 = PasswordField(label="Password (again)", required=True)
+
+    def __init__(self, *args, **kwargs):
+        super(SignupForm, self).__init__(*args, **kwargs)
+        self.fields.pop('active')
 
     def clean_email(self):
         """
