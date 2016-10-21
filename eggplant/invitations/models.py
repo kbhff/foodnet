@@ -1,15 +1,15 @@
 import uuid
+
 from django.conf import settings
 from django.core.mail import send_mail
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.utils.translation import ugettext_lazy as _
-
 from django.template import Context
 from django.template.loader import get_template
+from django.utils.translation import ugettext_lazy as _
 
-from eggplant.core.utils import absolute_url_reverse
+from eggplant.core.utils import absolute_url_reverse, disable_for_loaddata
 
 
 class InvitationBase(models.Model):
@@ -50,6 +50,7 @@ class DepartmentInvitation(InvitationBase):
     sender=DepartmentInvitation,
     dispatch_uid='membership-invitation-send_email_invitation'
 )
+@disable_for_loaddata
 def send_email_invitation(sender, instance, created, **kwargs):
     '''
     TODO: Implement an HTML message, commenting out the html_* lines below

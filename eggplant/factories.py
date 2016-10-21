@@ -7,7 +7,6 @@ import factory
 
 class UserFactory(factory.DjangoModelFactory):
 
-    # TODO: what's the domain name food.net for?
     username = factory.Sequence(lambda n: 'user%d@food.net' % n)
 
     class Meta:
