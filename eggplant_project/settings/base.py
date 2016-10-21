@@ -10,11 +10,10 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-from os.path import dirname, abspath
+from os.path import abspath, dirname
 
-from django.utils.translation import ugettext_lazy as _
 from django.contrib.messages import constants as messages_constants
-
+from django.utils.translation import ugettext_lazy as _
 from moneyed import DKK
 
 COOP_NAME = '{settings.COOP_NAME}'

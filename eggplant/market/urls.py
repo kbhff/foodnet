@@ -1,10 +1,7 @@
 
-from django.conf.urls import url, include
+from django.conf.urls import include, url
 
-from .views import cart
-from .views import inventory
-from .views import payment
-
+from .views import cart, inventory, payment
 
 payment_patterns = [
     url(r'payment-list/$', payment.payment_list, name="payment_list"),

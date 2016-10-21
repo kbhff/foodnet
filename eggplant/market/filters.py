@@ -1,11 +1,10 @@
-from django.utils.safestring import mark_safe
-from django.forms.widgets import flatatt
+import django_filters
 from django.db.models.fields import BLANK_CHOICE_DASH
+from django.forms.widgets import flatatt
 from django.utils.encoding import force_text
 from django.utils.http import urlencode
+from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
-
-import django_filters
 
 from .models.inventory import Product, ProductCategory
 

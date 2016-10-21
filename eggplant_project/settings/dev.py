@@ -1,8 +1,10 @@
 """
 Default settings for development
 """
-from .base import *  # @UnusedWildImport
+import os  # NOQA @UnusedImport
 import sys
+
+from .base import *  # @UnusedWildImport # NOQA
 
 DEBUG = True
 

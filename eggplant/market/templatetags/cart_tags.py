@@ -1,6 +1,6 @@
 from django import template
-from django.template import Template
 from django.core.urlresolvers import reverse
+from django.template import Template
 from django.template.base import TemplateSyntaxError
 
 register = template.Library()

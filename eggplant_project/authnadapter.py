@@ -1,15 +1,9 @@
 import logging
 
-from django import forms
-from django.conf import settings
-from django.utils.translation import ugettext_lazy as _
-from django.core.urlresolvers import reverse
-from django.contrib.auth.models import User
-from allauth.account.models import EmailAddress
 from allauth.account.adapter import DefaultAccountAdapter
-
+from django.conf import settings
+from django.core.urlresolvers import reverse
 from eggplant.invitations.models import DepartmentInvitation
-
 
 log = logging.getLogger(__name__)
 

@@ -1,22 +1,17 @@
 import logging
+
+from allauth.account.models import EmailAddress
+from allauth.account.views import PasswordSetView, sensitive_post_parameters_m
 from django.contrib import messages
-from django.contrib.auth import logout
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse_lazy
+from django.db import transaction
 from django.http import Http404
-
 from django.shortcuts import redirect, render
 from django.views.generic import FormView
-from django.db import transaction
-from django.core.files.base import ContentFile
-
-from allauth.account.views import PasswordSetView, PasswordChangeView, \
-    sensitive_post_parameters_m
-from allauth.account.models import EmailAddress
-
 from eggplant.core.views import LoginRequiredMixin
-from eggplant.profiles.forms import NewUserSetPasswordForm, ProfileForm, \
-    SignupForm
+from eggplant.profiles.forms import (NewUserSetPasswordForm, ProfileForm,
+                                     SignupForm)
 from eggplant.profiles.models import UserProfile
 
 logger = logging.getLogger(__name__)
@@ -107,7 +102,7 @@ class Profile(LoginRequiredMixin, FormView):
         self.object.tel = form.cleaned_data['tel']
         self.object.sex = form.cleaned_data['sex']
         self.object.photo = form.cleaned_data['photo']
-        result = self.object.save()
+        self.object.save()
 
         msg = "Your profile has been successfully updated."
         messages.success(self.request, msg)

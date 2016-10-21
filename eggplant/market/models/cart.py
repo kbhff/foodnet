@@ -1,7 +1,7 @@
 from decimal import Decimal
 
-from django.utils import timezone
 from django.db import models, transaction
+from django.utils import timezone
 
 
 class BasketManager(models.Manager):

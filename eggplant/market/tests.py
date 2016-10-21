@@ -1,13 +1,8 @@
-from django.test import TestCase
-from django.core.urlresolvers import reverse
 from allauth.account.models import EmailAddress
-
+from django.core.urlresolvers import reverse
+from django.test import TestCase
+from eggplant.factories import AccountFactory, DepartmentFactory, UserFactory
 from eggplant.profiles.models import UserProfile
-from eggplant.factories import (
-    UserFactory,
-    AccountFactory,
-    DepartmentFactory,
-)
 
 
 class TestPayments(TestCase):

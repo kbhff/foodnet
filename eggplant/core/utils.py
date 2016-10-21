@@ -1,6 +1,6 @@
-from functools import wraps
 import os
 import uuid
+from functools import wraps
 
 from django.conf import settings
 from django.contrib.sites.models import Site

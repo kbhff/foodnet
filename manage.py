@@ -3,7 +3,7 @@ import os
 import sys
 
 try:
-    from eggplant_project.settings import local  # @UnusedImport
+    from eggplant_project.settings import local  # @UnusedImport # NOQA
 except ImportError:
 
     from eggplant_project import settings

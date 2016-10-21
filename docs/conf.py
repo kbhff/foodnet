@@ -13,8 +13,13 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
+import sys
+
+import django
+import eggplant
+from django.db.models.fields.files import FileDescriptor
+from djmoney.models.fields import MoneyFieldProxy
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -29,16 +34,13 @@ sys.path.insert(0, os.path.abspath('..'))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "eggplant_project.settings.docs")
 
-import django
 django.setup()
 
 
 # Hacks for the autodoc introspector
 
-from django.db.models.fields.files import FileDescriptor
 FileDescriptor.__get__ = lambda self, *args, **kwargs: self
 
-from djmoney.models.fields import MoneyFieldProxy
 MoneyFieldProxy.__get__ = lambda self, *args, **kwargs: self
 
 
@@ -79,7 +81,6 @@ path = os.path.abspath(
 sys.path = [path] + sys.path
 sys.path = [os.path.join(path, 'dbbackup')] + sys.path
 
-import eggplant
 
 # General information about the project.
 project = 'Eggplant'

@@ -1,9 +1,7 @@
+from allauth.account.forms import (PasswordField, SetPasswordField,
+                                   SetPasswordForm)
 from django import forms
 from django.contrib.auth import get_user_model
-
-from allauth.account.forms import SetPasswordForm, SetPasswordField,\
-    PasswordField
-
 from eggplant.profiles.models import UserProfile
 
 

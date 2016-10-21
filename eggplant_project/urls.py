@@ -1,14 +1,11 @@
 # -*- coding: utf-8 -*-
-from django.conf import settings
-
-from django.conf.urls import include, url
-from django.contrib import admin
-from django.views.generic.base import RedirectView
-from django.contrib.auth.views import logout
-
 import eggplant.profiles.views
+from django.conf import settings
+from django.conf.urls import include, url
 from django.conf.urls.i18n import i18n_patterns
-
+from django.contrib import admin
+from django.contrib.auth.views import logout
+from django.views.generic.base import RedirectView
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),

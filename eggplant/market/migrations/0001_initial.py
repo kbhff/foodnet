@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.db import models, migrations
-import djmoney.models.fields
-import django.utils.timezone
 from decimal import Decimal
+
+import django.utils.timezone
+import djmoney.models.fields
 from django.conf import settings
+from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
