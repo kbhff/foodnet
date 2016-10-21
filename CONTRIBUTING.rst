@@ -96,6 +96,7 @@ start a new bash session to source it.
     $ mkvirtualenv eggplantenv -p python3.4
     $ workon eggplantenv
     $ pip install -r requirements/development.txt
+    $ pre-commit install  # Install precommit hooks for linting etc.
     $ python manage.py syncdb
     $ python manage.py runserver
 
@@ -108,6 +109,29 @@ After installing, you probably want a superuser so you can log in. Use
 This will deploy a local SQLite database and run a local webserver. If you are
 completely new to Django and Python, notice that you need
 `pip <https://pip.pypa.io/en/stable/installing/>`_, too.
+
+
+Fixtures for dev'ing
+--------------------
+
+Test/development fixtures in JSON are available in ``fixtures/``::
+
+    python manage.py loaddata fixtures/2016-10-21_exclude_getpaid.json
+
+You can generate new fixtures like this::
+
+    python manage.py dumpdata --natural-primary --natural-foreign --all --indent 4 -e getpaid -e sessions > `date +%F`_exclude_getpaid.json
+
+.. note::
+  Fixtures should come with the default superuser:
+
+    - Username: admin
+    - Password: admin
+    - Email: admin@example.com
+
+.. warning::
+  To be nice, remember to clear out the password fields manually before putting
+  anything in the repo.
 
 
 Pull Request Guidelines
