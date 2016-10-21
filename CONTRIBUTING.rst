@@ -107,7 +107,7 @@ After installing, you probably want a superuser so you can log in. Use
 
 This will deploy a local SQLite database and run a local webserver. If you are
 completely new to Django and Python, notice that you need
-`pip <https://pip.pypa.io/en/stable/installing.html>`_, too.
+`pip <https://pip.pypa.io/en/stable/installing/>`_, too.
 
 
 Pull Request Guidelines

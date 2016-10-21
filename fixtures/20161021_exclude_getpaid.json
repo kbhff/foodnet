@@ -1,0 +1,4266 @@
+[
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "sites",
+        "model": "site"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "account",
+        "model": "emailaddress"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "account",
+        "model": "emailconfirmation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "getpaid",
+        "model": "payment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "membership",
+        "model": "userprofile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "membership",
+        "model": "accountmembership"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "membership",
+        "model": "account"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "membership",
+        "model": "accountcategory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "membership",
+        "model": "departmentinvitation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "membership",
+        "model": "department"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "payments",
+        "model": "order"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "payments",
+        "model": "feeconfig"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "accounts",
+        "model": "account"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "accounts",
+        "model": "accountcategory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "departments",
+        "model": "department"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "departments",
+        "model": "departmentadministrator"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "invitations",
+        "model": "departmentinvitation"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "market",
+        "model": "basket"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "market",
+        "model": "basketitem"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "market",
+        "model": "product"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "market",
+        "model": "productcategory"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "market",
+        "model": "producttax"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "market",
+        "model": "payment"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "permissions",
+        "model": "userprofilepermission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "permissions",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "profiles",
+        "model": "userprofile"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "fields": {
+        "app_label": "roles",
+        "model": "roleassignment"
+    }
+},
+{
+    "model": "sites.site",
+    "fields": {
+        "domain": "localhost:8000",
+        "name": "eggplant-demo.herokuapp.com"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 2,
+    "fields": {
+        "email_address": 2,
+        "created": "2015-07-23T12:34:23.505Z",
+        "sent": "2015-07-23T12:34:23.646Z",
+        "key": "udruapgrimp3xdjglbulgzqr7maytpuohewqj9savxxuoyxpvgialoi4b3u7qpne"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 3,
+    "fields": {
+        "email_address": 3,
+        "created": "2015-07-30T13:31:19.872Z",
+        "sent": "2015-07-30T13:31:20.358Z",
+        "key": "y4eek131nhoabl4umyagurr00m0f5do6afeze5fzt1rfnhiliyv7ivzzvekhzkh6"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 4,
+    "fields": {
+        "email_address": 4,
+        "created": "2015-07-30T13:33:33.540Z",
+        "sent": "2015-07-30T13:33:33.640Z",
+        "key": "xzqfbvpoerlr2mo8ds1kjirk49sb73molimeszr3rgoko5vsxxbs5awr2q1hdgqu"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 5,
+    "fields": {
+        "email_address": 5,
+        "created": "2015-08-15T10:25:21.142Z",
+        "sent": null,
+        "key": "b82b4ab5542941aa985062aca749474b"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 6,
+    "fields": {
+        "email_address": 6,
+        "created": "2015-12-26T01:52:51.852Z",
+        "sent": "2015-12-26T01:52:51.987Z",
+        "key": "r6hpzbh6c73ewaqxzqukw2gvqjjailgqydrhmarjsyrhklnzqxgikeryayzdpqoz"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 7,
+    "fields": {
+        "email_address": 7,
+        "created": "2016-01-21T14:33:00.580Z",
+        "sent": "2016-01-21T14:33:01.001Z",
+        "key": "kbvczkmlu2gtcosodwl0fvover2aix3pwc6iz3f3hsax2ldltmmnyab0gbezbkb0"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 8,
+    "fields": {
+        "email_address": 8,
+        "created": "2016-01-23T10:48:42.496Z",
+        "sent": "2016-01-23T10:48:42.722Z",
+        "key": "tl0oazysktcjqw2jkt9vk0vofx4corbthjbsbvtly38pu3od05p4seh91fplqcci"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 9,
+    "fields": {
+        "email_address": 9,
+        "created": "2016-02-03T14:05:09.383Z",
+        "sent": "2016-02-03T14:05:10.358Z",
+        "key": "nklkukelxva0jr3yv4q0oc3l1znuvhnl2z6qskwc2t8kh4ouf7gbmqkoqetbzco3"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 10,
+    "fields": {
+        "email_address": 10,
+        "created": "2016-02-03T14:36:41.064Z",
+        "sent": "2016-02-03T14:36:41.465Z",
+        "key": "gevr6dslmwnilhuci0eerzsmmefv5yarsskdwa1ansq5npk7tvxt6p0k6zsqb85u"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 11,
+    "fields": {
+        "email_address": 11,
+        "created": "2016-02-03T16:16:32.097Z",
+        "sent": "2016-02-03T16:16:32.570Z",
+        "key": "4kslgeezur2jqrbgjrpx8nvbxtbjc0yacixyp2jury2uhksa46gywokidkocdqci"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 12,
+    "fields": {
+        "email_address": 12,
+        "created": "2016-02-03T18:46:03.242Z",
+        "sent": "2016-02-03T18:46:03.350Z",
+        "key": "id8jlf5l2ujtpmbxj7odj2y6cyw8mb1n9su4kmbj3mmd5atug6ch3gsbt9f9fx5x"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 13,
+    "fields": {
+        "email_address": 13,
+        "created": "2016-02-14T19:40:11.375Z",
+        "sent": "2016-02-14T19:40:11.812Z",
+        "key": "vftnst0focmwk384ikdxeju92wtkx1q2agavsg4jozxe0gdqsbfymjquoofmcaoz"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 14,
+    "fields": {
+        "email_address": 14,
+        "created": "2016-02-21T12:45:18.275Z",
+        "sent": null,
+        "key": "bc53c234a60e414098a6646814963a11"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 15,
+    "fields": {
+        "email_address": 15,
+        "created": "2016-03-01T06:21:35.320Z",
+        "sent": "2016-03-01T06:21:35.395Z",
+        "key": "hjdufjoi8ziosycwsacsygcuf8awlkrovpwzg7thqoom1agm55hfo4irce5ve1px"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 16,
+    "fields": {
+        "email_address": 16,
+        "created": "2016-03-16T13:09:54.324Z",
+        "sent": "2016-03-16T13:09:54.864Z",
+        "key": "xky6mualrp2kltlpee9jmovp87oe8qn7kc926lew5hzfytaiten6x7nvwre28nua"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 17,
+    "fields": {
+        "email_address": 17,
+        "created": "2016-04-28T16:30:51.343Z",
+        "sent": "2016-04-28T16:30:56.502Z",
+        "key": "r8cufgrbqzk2lvouj1bdqif3rzjddtyokvbxhlxyxdqx6se15krznxijbwq4qywx"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 18,
+    "fields": {
+        "email_address": 18,
+        "created": "2016-04-28T16:32:04.167Z",
+        "sent": "2016-04-28T16:32:04.252Z",
+        "key": "i2yjxfdij4s3iy847bfhv3avgyzyvbk7hbaicu2v21jbj8uh36zktf7lszv4m4z2"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 19,
+    "fields": {
+        "email_address": 19,
+        "created": "2016-04-28T21:00:13.586Z",
+        "sent": "2016-04-28T21:00:15.299Z",
+        "key": "urdxcaaxysfhvyvrwyqpsll2ocn1b01odgap3ittwl0pshpejguwyifo20x2xdbj"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 20,
+    "fields": {
+        "email_address": 20,
+        "created": "2016-05-11T14:59:52.551Z",
+        "sent": "2016-05-11T14:59:52.847Z",
+        "key": "abiryvc75abufccidztkxdrwju4in0xebhbuqts8lv6v8umskg3kn1frvlytgcck"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 21,
+    "fields": {
+        "email_address": 21,
+        "created": "2016-05-20T08:18:33.428Z",
+        "sent": "2016-05-20T08:18:33.587Z",
+        "key": "jvdosstcyhiekzwdhs5qk2xbd4g8oolzl9ctahucxjzv9vavgyhfmzdztpdq6tm0"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 22,
+    "fields": {
+        "email_address": 22,
+        "created": "2016-05-20T22:24:55.034Z",
+        "sent": "2016-05-20T22:24:55.504Z",
+        "key": "l6lcqtnube67paco1r4kimyfvakuryloqwnbi7htsnzevn1bhvtxjkmjezdtm0hn"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 23,
+    "fields": {
+        "email_address": 24,
+        "created": "2016-05-22T17:25:54.657Z",
+        "sent": "2016-05-22T17:25:54.717Z",
+        "key": "fdaswkfptilbtf6pdu4iwty7ixgvzklrbpf1sh564fvgarmema258mqllw8if6wa"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 24,
+    "fields": {
+        "email_address": 25,
+        "created": "2016-08-22T00:34:39.987Z",
+        "sent": "2016-08-22T00:34:40.606Z",
+        "key": "f8b2tmu1bkjn8xzg2uwjqoeka2032fq0whsj19eez6wnfn4kpb8gnhr4fmvjnpy2"
+    }
+},
+{
+    "model": "account.emailconfirmation",
+    "pk": 25,
+    "fields": {
+        "email_address": 26,
+        "created": "2016-09-26T19:07:45.998Z",
+        "sent": "2016-09-26T19:07:46.207Z",
+        "key": "9dqkjt5o5r8jrctzpjf4ymyhcqze4apls68ksh1uftfbwhjadcyso70wyd81nczd"
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 1,
+    "fields": {
+        "name": "",
+        "category": 1,
+        "department": 1,
+        "start": "2016-02-03T14:50:46.606Z",
+        "exit": null,
+        "active": true,
+        "user_profiles": [
+            2,
+            5,
+            1
+        ]
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 3,
+    "fields": {
+        "name": "Familien Testesen",
+        "category": 1,
+        "department": 1,
+        "start": "2016-02-03T17:52:35.885Z",
+        "exit": null,
+        "active": true,
+        "user_profiles": [
+            6
+        ]
+    }
+},
+{
+    "model": "accounts.account",
+    "pk": 4,
+    "fields": {
+        "name": "",
+        "category": 1,
+        "department": 2,
+        "start": "2016-02-21T12:45:18.287Z",
+        "exit": null,
+        "active": true,
+        "user_profiles": [
+            9
+        ]
+    }
+},
+{
+    "model": "accounts.accountcategory",
+    "pk": 1,
+    "fields": {
+        "name": "Husholdning"
+    }
+},
+{
+    "model": "accounts.accountcategory",
+    "pk": 2,
+    "fields": {
+        "name": "virksomhed"
+    }
+},
+{
+    "model": "departments.department",
+    "pk": 1,
+    "fields": {
+        "name": "N\u00f8rrebro",
+        "slug": "nrrebro",
+        "site": [
+            "localhost:8000"
+        ]
+    }
+},
+{
+    "model": "departments.department",
+    "pk": 2,
+    "fields": {
+        "name": "Vesterbro",
+        "slug": "vesterbro",
+        "site": [
+            "localhost:8000"
+        ]
+    }
+},
+{
+    "model": "market.basketitem",
+    "pk": 1,
+    "fields": {
+        "basket": 4,
+        "product": 1,
+        "quantity": 1,
+        "delivery_date": null
+    }
+},
+{
+    "model": "market.basketitem",
+    "pk": 2,
+    "fields": {
+        "basket": 7,
+        "product": 4,
+        "quantity": 1,
+        "delivery_date": null
+    }
+},
+{
+    "model": "market.basketitem",
+    "pk": 3,
+    "fields": {
+        "basket": 7,
+        "product": 3,
+        "quantity": 1,
+        "delivery_date": null
+    }
+},
+{
+    "model": "market.basketitem",
+    "pk": 4,
+    "fields": {
+        "basket": 6,
+        "product": 2,
+        "quantity": 1,
+        "delivery_date": null
+    }
+},
+{
+    "model": "market.product",
+    "pk": 1,
+    "fields": {
+        "title": "Gr\u00f8nsagspose",
+        "description": "En pose med gr\u00f8nsager",
+        "category": 1,
+        "price_currency": "DKK",
+        "stock": 0,
+        "price": "100.00",
+        "tax": 1,
+        "enabled": true,
+        "image": ""
+    }
+},
+{
+    "model": "market.product",
+    "pk": 2,
+    "fields": {
+        "title": "Frugtpose",
+        "description": "et udvalg af s\u00e6sonens b\u00e6r og frugt.",
+        "category": 1,
+        "price_currency": "DKK",
+        "stock": 0,
+        "price": "50.00",
+        "tax": 1,
+        "enabled": true,
+        "image": ""
+    }
+},
+{
+    "model": "market.product",
+    "pk": 3,
+    "fields": {
+        "title": "Speltmel (2 kg)",
+        "description": "Det fineste mel fra M\u00f8rdrupg\u00e5rd ved Bures\u00f8.",
+        "category": 2,
+        "price_currency": "DKK",
+        "stock": 0,
+        "price": "30.00",
+        "tax": 1,
+        "enabled": true,
+        "image": ""
+    }
+},
+{
+    "model": "market.product",
+    "pk": 4,
+    "fields": {
+        "title": "Farendl\u00f8se \u00c6blemost (3 liter) ",
+        "description": "L\u00e6kker \u00f8kologisk \u00e6blemost fra Farendl\u00f8se Mosteri. V\u00e6lg mellem Deep Green Resistance og Tutti Frutti.",
+        "category": 2,
+        "price_currency": "DKK",
+        "stock": 0,
+        "price": "90.00",
+        "tax": 1,
+        "enabled": true,
+        "image": ""
+    }
+},
+{
+    "model": "market.product",
+    "pk": 5,
+    "fields": {
+        "title": "\u00d8landshvede - mel fra Forum",
+        "description": "\u00d8landshvede - \u00d8ko\r\n\u00d8landshvede er en gammel kornsort med et meget h\u00f8jt proteinindhold (\u00d8landshvede 13,5% og alm. hvede 10-11%). Sortsm\u00e6ssigt minder den mest om spelt, men den er knap s\u00e5 tung at arbejde med, og det er nemmere at have en dej af 100% \u00f8landshvede.\r\n\r\nhttp://www.melfraforum.dk/kornsorter",
+        "category": 2,
+        "price_currency": "DKK",
+        "stock": null,
+        "price": "22.00",
+        "tax": 1,
+        "enabled": true,
+        "image": "product_images/5a0a608951e4408dbfc00e5780e618f4.png"
+    }
+},
+{
+    "model": "market.productcategory",
+    "pk": 1,
+    "fields": {
+        "title": "Poser",
+        "description": "Poser med ting",
+        "enabled": true
+    }
+},
+{
+    "model": "market.productcategory",
+    "pk": 2,
+    "fields": {
+        "title": "L\u00f8ssalg",
+        "description": "",
+        "enabled": true
+    }
+},
+{
+    "model": "market.producttax",
+    "pk": 1,
+    "fields": {
+        "title": "Moms",
+        "description": "Moms der betales til Skat",
+        "enabled": true,
+        "tax": "0.2500"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": [
+            "admin",
+            "logentry"
+        ],
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "auth",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete group",
+        "content_type": [
+            "auth",
+            "group"
+        ],
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user",
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": [
+            "contenttypes",
+            "contenttype"
+        ],
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete session",
+        "content_type": [
+            "sessions",
+            "session"
+        ],
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "add_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "change_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete site",
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "codename": "delete_site"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "add_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "change_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete email address",
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "codename": "delete_emailaddress"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "add_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "change_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete email confirmation",
+        "content_type": [
+            "account",
+            "emailconfirmation"
+        ],
+        "codename": "delete_emailconfirmation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add Payment",
+        "content_type": [
+            "getpaid",
+            "payment"
+        ],
+        "codename": "add_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change Payment",
+        "content_type": [
+            "getpaid",
+            "payment"
+        ],
+        "codename": "change_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete Payment",
+        "content_type": [
+            "getpaid",
+            "payment"
+        ],
+        "codename": "delete_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user profile",
+        "content_type": [
+            "membership",
+            "userprofile"
+        ],
+        "codename": "add_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user profile",
+        "content_type": [
+            "membership",
+            "userprofile"
+        ],
+        "codename": "change_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user profile",
+        "content_type": [
+            "membership",
+            "userprofile"
+        ],
+        "codename": "delete_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add account membership",
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "codename": "add_accountmembership"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change account membership",
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "codename": "change_accountmembership"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete account membership",
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "codename": "delete_accountmembership"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add account",
+        "content_type": [
+            "membership",
+            "account"
+        ],
+        "codename": "add_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change account",
+        "content_type": [
+            "membership",
+            "account"
+        ],
+        "codename": "change_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete account",
+        "content_type": [
+            "membership",
+            "account"
+        ],
+        "codename": "delete_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add account category",
+        "content_type": [
+            "membership",
+            "accountcategory"
+        ],
+        "codename": "add_accountcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change account category",
+        "content_type": [
+            "membership",
+            "accountcategory"
+        ],
+        "codename": "change_accountcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete account category",
+        "content_type": [
+            "membership",
+            "accountcategory"
+        ],
+        "codename": "delete_accountcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add department invitation",
+        "content_type": [
+            "membership",
+            "departmentinvitation"
+        ],
+        "codename": "add_departmentinvitation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change department invitation",
+        "content_type": [
+            "membership",
+            "departmentinvitation"
+        ],
+        "codename": "change_departmentinvitation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete department invitation",
+        "content_type": [
+            "membership",
+            "departmentinvitation"
+        ],
+        "codename": "delete_departmentinvitation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can send invitation",
+        "content_type": [
+            "membership",
+            "departmentinvitation"
+        ],
+        "codename": "can_invite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add department",
+        "content_type": [
+            "membership",
+            "department"
+        ],
+        "codename": "add_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change department",
+        "content_type": [
+            "membership",
+            "department"
+        ],
+        "codename": "change_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete department",
+        "content_type": [
+            "membership",
+            "department"
+        ],
+        "codename": "delete_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add order",
+        "content_type": [
+            "payments",
+            "order"
+        ],
+        "codename": "add_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change order",
+        "content_type": [
+            "payments",
+            "order"
+        ],
+        "codename": "change_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete order",
+        "content_type": [
+            "payments",
+            "order"
+        ],
+        "codename": "delete_order"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add fee config",
+        "content_type": [
+            "payments",
+            "feeconfig"
+        ],
+        "codename": "add_feeconfig"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change fee config",
+        "content_type": [
+            "payments",
+            "feeconfig"
+        ],
+        "codename": "change_feeconfig"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete fee config",
+        "content_type": [
+            "payments",
+            "feeconfig"
+        ],
+        "codename": "delete_feeconfig"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add account",
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "codename": "add_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change account",
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "codename": "change_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete account",
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "codename": "delete_account"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add account category",
+        "content_type": [
+            "accounts",
+            "accountcategory"
+        ],
+        "codename": "add_accountcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change account category",
+        "content_type": [
+            "accounts",
+            "accountcategory"
+        ],
+        "codename": "change_accountcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete account category",
+        "content_type": [
+            "accounts",
+            "accountcategory"
+        ],
+        "codename": "delete_accountcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add department",
+        "content_type": [
+            "departments",
+            "department"
+        ],
+        "codename": "add_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change department",
+        "content_type": [
+            "departments",
+            "department"
+        ],
+        "codename": "change_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete department",
+        "content_type": [
+            "departments",
+            "department"
+        ],
+        "codename": "delete_department"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add department administrator",
+        "content_type": [
+            "departments",
+            "departmentadministrator"
+        ],
+        "codename": "add_departmentadministrator"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change department administrator",
+        "content_type": [
+            "departments",
+            "departmentadministrator"
+        ],
+        "codename": "change_departmentadministrator"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete department administrator",
+        "content_type": [
+            "departments",
+            "departmentadministrator"
+        ],
+        "codename": "delete_departmentadministrator"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add department invitation",
+        "content_type": [
+            "invitations",
+            "departmentinvitation"
+        ],
+        "codename": "add_departmentinvitation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change department invitation",
+        "content_type": [
+            "invitations",
+            "departmentinvitation"
+        ],
+        "codename": "change_departmentinvitation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete department invitation",
+        "content_type": [
+            "invitations",
+            "departmentinvitation"
+        ],
+        "codename": "delete_departmentinvitation"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can send invitation",
+        "content_type": [
+            "invitations",
+            "departmentinvitation"
+        ],
+        "codename": "can_invite"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add basket",
+        "content_type": [
+            "market",
+            "basket"
+        ],
+        "codename": "add_basket"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change basket",
+        "content_type": [
+            "market",
+            "basket"
+        ],
+        "codename": "change_basket"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete basket",
+        "content_type": [
+            "market",
+            "basket"
+        ],
+        "codename": "delete_basket"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add basket item",
+        "content_type": [
+            "market",
+            "basketitem"
+        ],
+        "codename": "add_basketitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change basket item",
+        "content_type": [
+            "market",
+            "basketitem"
+        ],
+        "codename": "change_basketitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete basket item",
+        "content_type": [
+            "market",
+            "basketitem"
+        ],
+        "codename": "delete_basketitem"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add product",
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "codename": "add_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change product",
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "codename": "change_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete product",
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "codename": "delete_product"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add product category",
+        "content_type": [
+            "market",
+            "productcategory"
+        ],
+        "codename": "add_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change product category",
+        "content_type": [
+            "market",
+            "productcategory"
+        ],
+        "codename": "change_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete product category",
+        "content_type": [
+            "market",
+            "productcategory"
+        ],
+        "codename": "delete_productcategory"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add product tax",
+        "content_type": [
+            "market",
+            "producttax"
+        ],
+        "codename": "add_producttax"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change product tax",
+        "content_type": [
+            "market",
+            "producttax"
+        ],
+        "codename": "change_producttax"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete product tax",
+        "content_type": [
+            "market",
+            "producttax"
+        ],
+        "codename": "delete_producttax"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add payment",
+        "content_type": [
+            "market",
+            "payment"
+        ],
+        "codename": "add_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change payment",
+        "content_type": [
+            "market",
+            "payment"
+        ],
+        "codename": "change_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete payment",
+        "content_type": [
+            "market",
+            "payment"
+        ],
+        "codename": "delete_payment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user profile permission",
+        "content_type": [
+            "permissions",
+            "userprofilepermission"
+        ],
+        "codename": "add_userprofilepermission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user profile permission",
+        "content_type": [
+            "permissions",
+            "userprofilepermission"
+        ],
+        "codename": "change_userprofilepermission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user profile permission",
+        "content_type": [
+            "permissions",
+            "userprofilepermission"
+        ],
+        "codename": "delete_userprofilepermission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add permission",
+        "content_type": [
+            "permissions",
+            "permission"
+        ],
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change permission",
+        "content_type": [
+            "permissions",
+            "permission"
+        ],
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": [
+            "permissions",
+            "permission"
+        ],
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add user profile",
+        "content_type": [
+            "profiles",
+            "userprofile"
+        ],
+        "codename": "add_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change user profile",
+        "content_type": [
+            "profiles",
+            "userprofile"
+        ],
+        "codename": "change_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete user profile",
+        "content_type": [
+            "profiles",
+            "userprofile"
+        ],
+        "codename": "delete_userprofile"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can add role assignment",
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "codename": "add_roleassignment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can change role assignment",
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "codename": "change_roleassignment"
+    }
+},
+{
+    "model": "auth.permission",
+    "fields": {
+        "name": "Can delete role assignment",
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "codename": "delete_roleassignment"
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2015-08-25T06:38:15Z",
+        "is_superuser": true,
+        "username": "admin-old",
+        "first_name": "",
+        "last_name": "",
+        "email": "pawel+foodnet-admin@socialsquare.dk",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2015-07-23T12:01:27Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-07-01T13:42:23.157Z",
+        "is_superuser": false,
+        "username": "test_account_owner",
+        "first_name": "Test",
+        "last_name": "Owner",
+        "email": "pawel+foodnet-test_account_owner@socialsquare.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2015-07-23T12:12:32Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2015-12-08T19:58:05.516Z",
+        "is_superuser": false,
+        "username": "test_dept_admin",
+        "first_name": "dept",
+        "last_name": "admintest_dept_admin",
+        "email": "pawel+foodnet-test_dept_admin@socialsquare.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2015-07-23T12:16:49Z",
+        "groups": [],
+        "user_permissions": [
+            [
+                "can_invite",
+                "membership",
+                "departmentinvitation"
+            ]
+        ]
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2015-08-01T08:38:22.814Z",
+        "is_superuser": false,
+        "username": "test_member",
+        "first_name": "a new",
+        "last_name": "member",
+        "email": "pawel+foodnet-test_member@socialsquare.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2015-07-23T12:18:41Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2015-12-09T08:33:37.415Z",
+        "is_superuser": false,
+        "username": "lloydinho@gmail.com",
+        "first_name": "Andreas ",
+        "last_name": "Lloyd",
+        "email": "lloydinho@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2015-08-15T10:25:21.047Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-10-10T18:10:32.431Z",
+        "is_superuser": false,
+        "username": "kraen@socialsquare.dk",
+        "first_name": "Kr\u00e6n",
+        "last_name": "Hansen",
+        "email": "kraen@socialsquare.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2015-12-26T01:52:51.771Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-01-21T14:33:32.274Z",
+        "is_superuser": false,
+        "username": "andreas.lloyd@gmail.com",
+        "first_name": "Andreas",
+        "last_name": "Lloyd",
+        "email": "andreas.lloyd@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-01-21T14:33:00.529Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-01-23T11:00:55.318Z",
+        "is_superuser": false,
+        "username": "jonas_bc@outlook.dk",
+        "first_name": "jonas",
+        "last_name": "boye",
+        "email": "jonas_bc@outlook.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-01-23T10:48:42.446Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-02-03T20:08:21.679Z",
+        "is_superuser": false,
+        "username": "test@roskildeff.dk",
+        "first_name": "Peter",
+        "last_name": "Pan",
+        "email": "test@roskildeff.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-02-03T14:05:09.260Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-05-11T16:22:45.512Z",
+        "is_superuser": true,
+        "username": "benjamin@overtag.dk",
+        "first_name": "Benjamin",
+        "last_name": "Bach",
+        "email": "benjamin@overtag.dk",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-02-03T14:36:40Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$30000$baxDuYYyZfOp$dP6wIn2LRdJYecsar4dggwaC+b+A/3X8/qyISDTBR+c=",
+        "last_login": "2016-10-10T18:35:04.688Z",
+        "is_superuser": true,
+        "username": "admin",
+        "first_name": "Frank",
+        "last_name": "Testesen",
+        "email": "admin@example.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2016-02-03T14:38:04Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-02-03T16:17:50.147Z",
+        "is_superuser": false,
+        "username": "benjaoming@gmail.com",
+        "first_name": "Benjamin",
+        "last_name": "Bach",
+        "email": "benjaoming@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-02-03T16:16:32.059Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-02-15T00:38:08.605Z",
+        "is_superuser": false,
+        "username": "memb_eggplant@mikini.dk",
+        "first_name": "Mikkel",
+        "last_name": "Nielsen",
+        "email": "memb_eggplant@mikini.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-02-14T19:40:11.273Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-02-21T12:46:17.117Z",
+        "is_superuser": false,
+        "username": "tholype@hotmail.com",
+        "first_name": "Thomas ",
+        "last_name": "Persson",
+        "email": "tholype@hotmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-02-21T12:45:18.260Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "hejima@msn.com",
+        "first_name": "Heidi",
+        "last_name": "J\u00f8rgensen",
+        "email": "hejima@msn.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-03-01T06:21:35.269Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-03-16T13:11:13.260Z",
+        "is_superuser": false,
+        "username": "siemenbaader@gmail.com",
+        "first_name": "Siemen",
+        "last_name": "Baader",
+        "email": "siemenbaader@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-03-16T13:09:54.248Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": null,
+        "is_superuser": false,
+        "username": "Lambow@gmail.com",
+        "first_name": "Roland",
+        "last_name": "Lambow",
+        "email": "Lambow@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-04-28T16:30:51.298Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-04-28T16:33:06.358Z",
+        "is_superuser": false,
+        "username": "hydrolio-vz@yahoo.de",
+        "first_name": "Peter",
+        "last_name": "Lamm",
+        "email": "hydrolio-vz@yahoo.de",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-04-28T16:32:04.135Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-08-03T23:11:31.133Z",
+        "is_superuser": false,
+        "username": "troelsknudsen@gmail.com",
+        "first_name": "Troels",
+        "last_name": "Knudsen",
+        "email": "troelsknudsen@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-04-28T21:00:13.477Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-05-11T15:01:46.490Z",
+        "is_superuser": false,
+        "username": "andreas@borgerlyst.dk",
+        "first_name": "Andreas ",
+        "last_name": "Lloyd",
+        "email": "andreas@borgerlyst.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-05-11T14:59:52.481Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-05-20T08:22:20.692Z",
+        "is_superuser": false,
+        "username": "mikkelhoff@gmail.com",
+        "first_name": "rupert",
+        "last_name": "murdoch",
+        "email": "mikkelhoff@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-05-20T08:18:33.363Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-05-20T22:25:14.902Z",
+        "is_superuser": false,
+        "username": "nathanhilbert@yahoo.com",
+        "first_name": "Nathan",
+        "last_name": "Hilbert",
+        "email": "nathanhilbert@yahoo.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-05-20T22:24:54.999Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-05-22T17:26:23.076Z",
+        "is_superuser": false,
+        "username": "ajl@teliamail.dk",
+        "first_name": "Alexander",
+        "last_name": "Lee",
+        "email": "ajl@teliamail.dk",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-05-22T17:25:54.621Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-08-22T00:36:28.884Z",
+        "is_superuser": false,
+        "username": "jose.aliste@gmail.com",
+        "first_name": "W",
+        "last_name": "www",
+        "email": "jose.aliste@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-08-22T00:34:39.918Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "",
+        "last_login": "2016-09-26T19:08:23.554Z",
+        "is_superuser": false,
+        "username": "buethastum@gmail.com",
+        "first_name": "Bue",
+        "last_name": "Thastum",
+        "email": "buethastum@gmail.com",
+        "is_staff": false,
+        "is_active": true,
+        "date_joined": "2016-09-26T19:07:45.733Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "test_account_owner"
+        ],
+        "email": "pawel+foodnet-test_account_owner@socialsquare.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "test_dept_admin"
+        ],
+        "email": "pawel+foodnet-test_dept_admin@socialsquare.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "test_member"
+        ],
+        "email": "pawel+foodnet-test_member@socialsquare.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "lloydinho@gmail.com"
+        ],
+        "email": "lloydinho@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "kraen@socialsquare.dk"
+        ],
+        "email": "kraen@socialsquare.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "andreas.lloyd@gmail.com"
+        ],
+        "email": "andreas.lloyd@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "jonas_bc@outlook.dk"
+        ],
+        "email": "jonas_bc@outlook.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "test@roskildeff.dk"
+        ],
+        "email": "test@roskildeff.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "benjamin@overtag.dk"
+        ],
+        "email": "benjamin@overtag.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "benjaoming@gmail.com"
+        ],
+        "email": "benjaoming@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "email": "eggplant@kbhff.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "memb_eggplant@mikini.dk"
+        ],
+        "email": "memb_eggplant@mikini.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "tholype@hotmail.com"
+        ],
+        "email": "tholype@hotmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "hejima@msn.com"
+        ],
+        "email": "hejima@msn.com",
+        "verified": false,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "siemenbaader@gmail.com"
+        ],
+        "email": "siemenbaader@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "Lambow@gmail.com"
+        ],
+        "email": "Lambow@gmail.com",
+        "verified": false,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "hydrolio-vz@yahoo.de"
+        ],
+        "email": "hydrolio-vz@yahoo.de",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "troelsknudsen@gmail.com"
+        ],
+        "email": "troelsknudsen@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "andreas@borgerlyst.dk"
+        ],
+        "email": "andreas@borgerlyst.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "mikkelhoff@gmail.com"
+        ],
+        "email": "mikkelhoff@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 22,
+    "fields": {
+        "user": [
+            "nathanhilbert@yahoo.com"
+        ],
+        "email": "nathanhilbert@yahoo.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 24,
+    "fields": {
+        "user": [
+            "ajl@teliamail.dk"
+        ],
+        "email": "ajl@teliamail.dk",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 25,
+    "fields": {
+        "user": [
+            "jose.aliste@gmail.com"
+        ],
+        "email": "jose.aliste@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "account.emailaddress",
+    "pk": 26,
+    "fields": {
+        "user": [
+            "buethastum@gmail.com"
+        ],
+        "email": "buethastum@gmail.com",
+        "verified": true,
+        "primary": true
+    }
+},
+{
+    "model": "invitations.departmentinvitation",
+    "pk": 1,
+    "fields": {
+        "email": "tholype@hotmail.com",
+        "accepted": true,
+        "accepted_at": null,
+        "verification_key": "bc53c234-a60e-4140-98a6-646814963a11",
+        "created": "2016-02-21T12:44:08.135Z",
+        "invited_by": [
+            "admin"
+        ],
+        "department": 2,
+        "account_category": 1
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "kraen@socialsquare.dk"
+        ],
+        "created": "2015-12-26T01:53:57.485Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "andreas.lloyd@gmail.com"
+        ],
+        "created": "2016-01-21T14:34:05.466Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "jonas_bc@outlook.dk"
+        ],
+        "created": "2016-01-23T11:01:59.330Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "benjamin@overtag.dk"
+        ],
+        "created": "2016-02-03T14:37:12.175Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "benjaoming@gmail.com"
+        ],
+        "created": "2016-02-03T16:18:01.041Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "created": "2016-02-03T18:49:10.724Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "test@roskildeff.dk"
+        ],
+        "created": "2016-02-03T20:08:43.008Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "memb_eggplant@mikini.dk"
+        ],
+        "created": "2016-02-14T19:42:01.701Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "tholype@hotmail.com"
+        ],
+        "created": "2016-02-21T12:47:48.511Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "siemenbaader@gmail.com"
+        ],
+        "created": "2016-03-16T13:11:19.029Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "hydrolio-vz@yahoo.de"
+        ],
+        "created": "2016-04-28T16:33:11.400Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "troelsknudsen@gmail.com"
+        ],
+        "created": "2016-04-28T21:02:05.224Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "andreas@borgerlyst.dk"
+        ],
+        "created": "2016-05-11T15:02:13.542Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "mikkelhoff@gmail.com"
+        ],
+        "created": "2016-05-20T08:22:26.853Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "nathanhilbert@yahoo.com"
+        ],
+        "created": "2016-05-20T22:25:21.796Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "ajl@teliamail.dk"
+        ],
+        "created": "2016-05-22T17:26:38.951Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "jose.aliste@gmail.com"
+        ],
+        "created": "2016-08-22T00:36:41.238Z",
+        "status": "open"
+    }
+},
+{
+    "model": "market.basket",
+    "pk": 18,
+    "fields": {
+        "user": [
+            "buethastum@gmail.com"
+        ],
+        "created": "2016-09-26T19:08:29.672Z",
+        "status": "open"
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 1,
+    "fields": {
+        "user": [
+            "kraen@socialsquare.dk"
+        ],
+        "middle_name": "",
+        "address": "Mimersgade 62, 1.th.",
+        "postcode": "2200",
+        "city": "K\u00f8benhavn N",
+        "tel": "25531354",
+        "tel2": "",
+        "sex": "male",
+        "photo": "./kraenhansen.jpg",
+        "created": "2015-12-26T01:52:51.832Z",
+        "changed": "2016-10-10T16:43:29.906Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 2,
+    "fields": {
+        "user": [
+            "andreas.lloyd@gmail.com"
+        ],
+        "middle_name": "",
+        "address": "N\u00f8rrebrogade 183, 5 th.",
+        "postcode": "2200",
+        "city": "K\u00f8benhavn N",
+        "tel": "30253049",
+        "tel2": "",
+        "sex": "male",
+        "photo": "./andreas-portrait.jpg",
+        "created": "2016-01-21T14:33:00.564Z",
+        "changed": "2016-01-21T14:33:55.188Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 3,
+    "fields": {
+        "user": [
+            "jonas_bc@outlook.dk"
+        ],
+        "middle_name": "",
+        "address": "test",
+        "postcode": "2000",
+        "city": "test",
+        "tel": "11111111",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-01-23T10:48:42.489Z",
+        "changed": "2016-01-23T10:48:42.490Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 4,
+    "fields": {
+        "user": [
+            "test@roskildeff.dk"
+        ],
+        "middle_name": "Thomas L P",
+        "address": "Eget bo 12",
+        "postcode": "4000",
+        "city": "Roskilde",
+        "tel": "33 33 31 31",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-02-03T14:05:09.372Z",
+        "changed": "2016-02-03T14:05:09.372Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 5,
+    "fields": {
+        "user": [
+            "benjamin@overtag.dk"
+        ],
+        "middle_name": "",
+        "address": "Vej 123",
+        "postcode": "2200",
+        "city": "Copenhagen",
+        "tel": "12345678",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-02-03T14:36:41.055Z",
+        "changed": "2016-02-03T14:36:41.055Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 6,
+    "fields": {
+        "user": [
+            "admin"
+        ],
+        "middle_name": "",
+        "address": "Teste All\u00e9 22",
+        "postcode": "2720",
+        "city": "Vanl\u00f8se",
+        "tel": "22 22 11 22",
+        "tel2": "",
+        "sex": "",
+        "photo": "",
+        "created": "2016-02-03T14:38:04.902Z",
+        "changed": "2016-05-11T15:14:53.874Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 7,
+    "fields": {
+        "user": [
+            "benjaoming@gmail.com"
+        ],
+        "middle_name": "",
+        "address": "Vej 123",
+        "postcode": "2200",
+        "city": "Copenhagen",
+        "tel": "12345678",
+        "tel2": "",
+        "sex": "female",
+        "photo": "",
+        "created": "2016-02-03T16:16:32.091Z",
+        "changed": "2016-02-03T16:16:32.091Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 8,
+    "fields": {
+        "user": [
+            "memb_eggplant@mikini.dk"
+        ],
+        "middle_name": "Kirkgaard",
+        "address": "\u00d8kogade 7",
+        "postcode": "6666",
+        "city": "\u00d8korup",
+        "tel": "+45",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-02-14T19:40:11.356Z",
+        "changed": "2016-02-14T19:40:11.356Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 9,
+    "fields": {
+        "user": [
+            "tholype@hotmail.com"
+        ],
+        "middle_name": "Tester",
+        "address": "Eget Bo\r\nGreenway Village",
+        "postcode": "6666",
+        "city": "Gr\u00f8nby",
+        "tel": "+45 11 22 33",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-02-21T12:45:18.265Z",
+        "changed": "2016-02-21T12:47:30.088Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 10,
+    "fields": {
+        "user": [
+            "hejima@msn.com"
+        ],
+        "middle_name": "Torp",
+        "address": "Gl. Kattrupvej 15\r\nBorupgaard\r\n",
+        "postcode": "8751",
+        "city": "Gedved",
+        "tel": "50516171",
+        "tel2": "",
+        "sex": "female",
+        "photo": "",
+        "created": "2016-03-01T06:21:35.304Z",
+        "changed": "2016-03-01T06:21:35.304Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 11,
+    "fields": {
+        "user": [
+            "siemenbaader@gmail.com"
+        ],
+        "middle_name": "",
+        "address": "Stavangergade 2\r\n",
+        "postcode": "8200",
+        "city": "Aarhus",
+        "tel": "60657079",
+        "tel2": "",
+        "sex": "",
+        "photo": "",
+        "created": "2016-03-16T13:09:54.305Z",
+        "changed": "2016-03-16T13:09:54.305Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 12,
+    "fields": {
+        "user": [
+            "Lambow@gmail.com"
+        ],
+        "middle_name": "",
+        "address": "Lyngby",
+        "postcode": "2900",
+        "city": "Lyngby",
+        "tel": "55664477",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-04-28T16:30:51.328Z",
+        "changed": "2016-04-28T16:30:51.328Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 13,
+    "fields": {
+        "user": [
+            "hydrolio-vz@yahoo.de"
+        ],
+        "middle_name": "",
+        "address": "Helsing\u00f8r",
+        "postcode": "2600",
+        "city": "Helsing\u00f8r",
+        "tel": "66443388",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-04-28T16:32:04.163Z",
+        "changed": "2016-04-28T16:32:04.163Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 14,
+    "fields": {
+        "user": [
+            "troelsknudsen@gmail.com"
+        ],
+        "middle_name": "",
+        "address": "\u00d8sterbro 14 3th\r\n42528221",
+        "postcode": "9000",
+        "city": "Aalborg",
+        "tel": "42528221",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-04-28T21:00:13.573Z",
+        "changed": "2016-04-28T21:00:13.573Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 15,
+    "fields": {
+        "user": [
+            "andreas@borgerlyst.dk"
+        ],
+        "middle_name": "",
+        "address": "N\u00f8rrebrogade 12",
+        "postcode": "2200",
+        "city": "K\u00f8benhavn N",
+        "tel": "30253049",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-05-11T14:59:52.535Z",
+        "changed": "2016-05-11T14:59:52.535Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 16,
+    "fields": {
+        "user": [
+            "mikkelhoff@gmail.com"
+        ],
+        "middle_name": "",
+        "address": "dreamspace 1 1000 wonderspace",
+        "postcode": "1000",
+        "city": "Wonderspace",
+        "tel": "100000000",
+        "tel2": "",
+        "sex": "other",
+        "photo": "",
+        "created": "2016-05-20T08:18:33.412Z",
+        "changed": "2016-05-20T08:18:33.412Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 17,
+    "fields": {
+        "user": [
+            "nathanhilbert@yahoo.com"
+        ],
+        "middle_name": "",
+        "address": "10 North St\r\n",
+        "postcode": "78705",
+        "city": "Austin",
+        "tel": "898-232-2322",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-05-20T22:24:55.028Z",
+        "changed": "2016-05-20T22:24:55.028Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 19,
+    "fields": {
+        "user": [
+            "ajl@teliamail.dk"
+        ],
+        "middle_name": "",
+        "address": "Skippingevej 25\r\nS\u00e6rslev",
+        "postcode": "4460",
+        "city": "Snertinge",
+        "tel": "+4526649288",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-05-22T17:25:54.652Z",
+        "changed": "2016-05-22T17:25:54.652Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 20,
+    "fields": {
+        "user": [
+            "jose.aliste@gmail.com"
+        ],
+        "middle_name": "WW",
+        "address": "sdsd",
+        "postcode": "s",
+        "city": "S",
+        "tel": "s",
+        "tel2": "",
+        "sex": "male",
+        "photo": "",
+        "created": "2016-08-22T00:34:39.978Z",
+        "changed": "2016-08-22T00:34:39.978Z",
+        "permissions": []
+    }
+},
+{
+    "model": "profiles.userprofile",
+    "pk": 21,
+    "fields": {
+        "user": [
+            "buethastum@gmail.com"
+        ],
+        "middle_name": "",
+        "address": "test",
+        "postcode": "2300",
+        "city": "Copenhagen",
+        "tel": "12345678",
+        "tel2": "",
+        "sex": "",
+        "photo": "./Umzugskarton.jpg",
+        "created": "2016-09-26T19:07:45.983Z",
+        "changed": "2016-09-26T19:09:24.895Z",
+        "permissions": []
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 1,
+    "fields": {
+        "role": "purchaser",
+        "user": [
+            "kraen@socialsquare.dk"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 2,
+    "fields": {
+        "role": "communicator",
+        "user": [
+            "kraen@socialsquare.dk"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 3,
+    "fields": {
+        "role": "purchaser",
+        "user": [
+            "andreas.lloyd@gmail.com"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 4,
+    "fields": {
+        "role": "purchaser",
+        "user": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 5,
+    "fields": {
+        "role": "packer",
+        "user": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 6,
+    "fields": {
+        "role": "accountant",
+        "user": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 7,
+    "fields": {
+        "role": "cashier",
+        "user": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 8,
+    "fields": {
+        "role": "communicator",
+        "user": [
+            "admin"
+        ]
+    }
+},
+{
+    "model": "roles.roleassignment",
+    "pk": 9,
+    "fields": {
+        "role": "purchaser",
+        "user": [
+            "andreas@borgerlyst.dk"
+        ]
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+        "action_time": "2015-07-23T12:12:32.607Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "test_account_owner",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+        "action_time": "2015-07-23T12:13:19.903Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "2",
+        "object_repr": "test_account_owner",
+        "action_flag": 2,
+        "change_message": "Changed first_name, last_name, email and last_login."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+        "action_time": "2015-07-23T12:13:57.722Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "first department",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+        "action_time": "2015-07-23T12:14:56.280Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountcategory"
+        ],
+        "object_id": "1",
+        "object_repr": "home account",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+        "action_time": "2015-07-23T12:15:06.306Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "account"
+        ],
+        "object_id": "1",
+        "object_repr": "12345 active",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+        "action_time": "2015-07-23T12:15:22.367Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "object_id": "1",
+        "object_repr": "AccountMembership object",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+        "action_time": "2015-07-23T12:16:50.082Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "test_dept_admin",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+        "action_time": "2015-07-23T12:18:17.019Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "3",
+        "object_repr": "test_dept_admin",
+        "action_flag": 2,
+        "change_message": "Changed first_name, last_name, email and user_permissions."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+        "action_time": "2015-07-23T12:18:41.393Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "test_member",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+        "action_time": "2015-07-23T12:19:06.762Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "4",
+        "object_repr": "test_member",
+        "action_flag": 2,
+        "change_message": "Changed first_name, last_name and email."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+        "action_time": "2015-07-23T12:19:49.577Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "object_id": "2",
+        "object_repr": "AccountMembership object",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+        "action_time": "2015-07-23T12:20:01.306Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "object_id": "3",
+        "object_repr": "AccountMembership object",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+        "action_time": "2015-07-23T12:20:11.205Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "object_id": "4",
+        "object_repr": "AccountMembership object",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+        "action_time": "2015-07-23T12:20:21.470Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "object_id": "5",
+        "object_repr": "AccountMembership object",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+        "action_time": "2015-07-23T12:31:06.276Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "object_id": "1",
+        "object_repr": "12345 <-> pawel+foodnet-test_account_owner@socialsquare.dk",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+        "action_time": "2015-08-15T13:20:18.840Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "2",
+        "object_repr": "socialsquare-eggplant.herokuapp.com",
+        "action_flag": 2,
+        "change_message": "Changed domain and name."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+        "action_time": "2015-08-15T13:28:59.349Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "account"
+        ],
+        "object_id": "2",
+        "object_repr": "12313 active",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+        "action_time": "2015-08-15T13:29:26.285Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "membership",
+            "accountmembership"
+        ],
+        "object_id": "6",
+        "object_repr": "12313 <-> lloydinho@gmail.com",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+        "action_time": "2015-08-15T13:31:22.038Z",
+        "user": [
+            "admin-old"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "5",
+        "object_repr": "lloydinho@gmail.com",
+        "action_flag": 2,
+        "change_message": "Changed password."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+        "action_time": "2016-02-03T14:48:42.632Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "departments",
+            "department"
+        ],
+        "object_id": "1",
+        "object_repr": "N\u00f8rrebro",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+        "action_time": "2016-02-03T14:49:47.407Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "accountcategory"
+        ],
+        "object_id": "1",
+        "object_repr": "Husholdning",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+        "action_time": "2016-02-03T14:50:46.642Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "1",
+        "object_repr": "Husholdning N\u00f8rrebro active",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+        "action_time": "2016-02-03T14:51:09.473Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "1",
+        "object_repr": "Husholdning N\u00f8rrebro active",
+        "action_flag": 2,
+        "change_message": "Changed name and user_profiles."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+        "action_time": "2016-02-03T14:51:24.066Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "1",
+        "object_repr": "Husholdning N\u00f8rrebro active",
+        "action_flag": 2,
+        "change_message": "Deleted account-userprofile relationship \"Account_user_profiles object\"."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+        "action_time": "2016-02-03T14:52:29.911Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "producttax"
+        ],
+        "object_id": "1",
+        "object_repr": "Moms (25%)",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 26,
+    "fields": {
+        "action_time": "2016-02-03T14:53:02.041Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "productcategory"
+        ],
+        "object_id": "1",
+        "object_repr": "Poser",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 27,
+    "fields": {
+        "action_time": "2016-02-03T14:53:04.187Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "object_id": "1",
+        "object_repr": "1 Gr\u00f8nsagspose (Poser)",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 28,
+    "fields": {
+        "action_time": "2016-02-03T14:54:45.436Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "1",
+        "object_repr": "kraen@socialsquare.dk is purchaser",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 29,
+    "fields": {
+        "action_time": "2016-02-03T14:54:57.210Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "2",
+        "object_repr": "kraen@socialsquare.dk is communicator",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 30,
+    "fields": {
+        "action_time": "2016-02-03T16:15:08.141Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "10",
+        "object_repr": "benjamin@overtag.dk",
+        "action_flag": 2,
+        "change_message": "Changed is_staff and is_superuser."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 31,
+    "fields": {
+        "action_time": "2016-02-03T17:37:34.538Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "object_id": "1",
+        "object_repr": "kraen+eggplant-admin@socialsquare.dk (admin)",
+        "action_flag": 2,
+        "change_message": "Changed email."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 32,
+    "fields": {
+        "action_time": "2016-02-03T17:38:06.861Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "object_id": "1",
+        "object_repr": "kraen+eggplant-admin@socialsquare.dk (admin)",
+        "action_flag": 3,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 34,
+    "fields": {
+        "action_time": "2016-02-03T17:39:12.946Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "1",
+        "object_repr": "admin-old",
+        "action_flag": 2,
+        "change_message": "Changed username."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 35,
+    "fields": {
+        "action_time": "2016-02-03T17:39:35.080Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "auth",
+            "user"
+        ],
+        "object_id": "11",
+        "object_repr": "admin",
+        "action_flag": 2,
+        "change_message": "Changed username and email."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 36,
+    "fields": {
+        "action_time": "2016-02-03T17:40:42.870Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "1",
+        "object_repr": "Husholdning N\u00f8rrebro active",
+        "action_flag": 2,
+        "change_message": "Changed name."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 37,
+    "fields": {
+        "action_time": "2016-02-03T17:41:23.601Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "1",
+        "object_repr": "Husholdning N\u00f8rrebro active",
+        "action_flag": 2,
+        "change_message": "Changed user_profiles."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 38,
+    "fields": {
+        "action_time": "2016-02-03T17:43:26.746Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "1",
+        "object_repr": "Husholdning N\u00f8rrebro active",
+        "action_flag": 2,
+        "change_message": "Changed user_profiles."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 39,
+    "fields": {
+        "action_time": "2016-02-03T17:43:59.843Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "accountcategory"
+        ],
+        "object_id": "2",
+        "object_repr": "virksomhed",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 40,
+    "fields": {
+        "action_time": "2016-02-03T17:44:43.616Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "departments",
+            "department"
+        ],
+        "object_id": "2",
+        "object_repr": "Vesterbro",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 41,
+    "fields": {
+        "action_time": "2016-02-03T17:45:04.807Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "sites",
+            "site"
+        ],
+        "object_id": "2",
+        "object_repr": "eggplant-demo.herokuapp.com",
+        "action_flag": 2,
+        "change_message": "Changed domain and name."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 42,
+    "fields": {
+        "action_time": "2016-02-03T17:45:46.798Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "productcategory"
+        ],
+        "object_id": "2",
+        "object_repr": "L\u00f8ssalg",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 43,
+    "fields": {
+        "action_time": "2016-02-03T17:46:30.044Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "object_id": "2",
+        "object_repr": "2 Frugtpose (Poser)",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 44,
+    "fields": {
+        "action_time": "2016-02-03T17:47:23.084Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "object_id": "3",
+        "object_repr": "3 Speltmel (2 kg) (L\u00f8ssalg)",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 45,
+    "fields": {
+        "action_time": "2016-02-03T17:48:27.718Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "object_id": "4",
+        "object_repr": "4 Farendl\u00f8se \u00c6blemost (3 liter)  (L\u00f8ssalg)",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 46,
+    "fields": {
+        "action_time": "2016-02-03T17:50:03.349Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "3",
+        "object_repr": "andreas.lloyd@gmail.com is purchaser",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 47,
+    "fields": {
+        "action_time": "2016-02-03T17:50:27.556Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "4",
+        "object_repr": "admin is purchaser",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 48,
+    "fields": {
+        "action_time": "2016-02-03T17:50:41.415Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "5",
+        "object_repr": "admin is packer",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 49,
+    "fields": {
+        "action_time": "2016-02-03T17:50:58.342Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "6",
+        "object_repr": "admin is accountant",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 50,
+    "fields": {
+        "action_time": "2016-02-03T17:51:08.540Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "7",
+        "object_repr": "admin is cashier",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 51,
+    "fields": {
+        "action_time": "2016-02-03T17:51:17.495Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "8",
+        "object_repr": "admin is communicator",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 52,
+    "fields": {
+        "action_time": "2016-02-03T17:52:35.897Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "accounts",
+            "account"
+        ],
+        "object_id": "3",
+        "object_repr": "Husholdning N\u00f8rrebro active",
+        "action_flag": 1,
+        "change_message": ""
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 53,
+    "fields": {
+        "action_time": "2016-02-03T18:46:53.035Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "object_id": "12",
+        "object_repr": "kraen+eggplant-admin@socialsquare.dk (admin)",
+        "action_flag": 2,
+        "change_message": "Changed verified and primary."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 54,
+    "fields": {
+        "action_time": "2016-02-03T18:49:48.663Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "account",
+            "emailaddress"
+        ],
+        "object_id": "12",
+        "object_repr": "eggplant@kbhff.dk (admin)",
+        "action_flag": 2,
+        "change_message": "Changed email."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 55,
+    "fields": {
+        "action_time": "2016-02-11T17:49:45.808Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "5 \u00d8landshvede - mel fra Forum (L\u00f8ssalg)",
+        "action_flag": 2,
+        "change_message": "Changed image."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 56,
+    "fields": {
+        "action_time": "2016-02-11T17:50:36.342Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "5 \u00d8landshvede - mel fra Forum (L\u00f8ssalg)",
+        "action_flag": 2,
+        "change_message": "Changed description."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 57,
+    "fields": {
+        "action_time": "2016-02-14T19:35:41.785Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "market",
+            "product"
+        ],
+        "object_id": "5",
+        "object_repr": "5 \u00d8landshvede - mel fra Forum (L\u00f8ssalg)",
+        "action_flag": 2,
+        "change_message": "Changed image."
+    }
+},
+{
+    "model": "admin.logentry",
+    "pk": 58,
+    "fields": {
+        "action_time": "2016-05-11T15:04:23.593Z",
+        "user": [
+            "admin"
+        ],
+        "content_type": [
+            "roles",
+            "roleassignment"
+        ],
+        "object_id": "9",
+        "object_repr": "andreas@borgerlyst.dk is purchaser",
+        "action_flag": 1,
+        "change_message": ""
+    }
+}
+]

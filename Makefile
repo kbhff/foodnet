@@ -21,6 +21,7 @@ clean-build:
 	rm -fr .eggs/
 	find . -name '*.egg-info' -exec rm -fr {} +
 	find . -name '*.egg' -exec rm -f {} +
+	rm -f docs/eggplant.*
 
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
