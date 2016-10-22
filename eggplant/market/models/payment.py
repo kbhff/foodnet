@@ -16,6 +16,7 @@ class Payment(models.Model):
     account = models.ForeignKey('accounts.Account')
     created = models.DateTimeField(auto_now_add=True, null=False,
                                    db_index=True)
+    basket = models.ForeignKey('market.Basket', editable=False, default=None, on_delete=models.PROTECT)
 
     def get_absolute_url(self):
         return reverse('eggplant:market:order_info', kwargs={'pk': self.pk})

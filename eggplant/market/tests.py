@@ -20,6 +20,9 @@ from eggplant.market.models.cart import(
     Basket,
 )
 
+from moneyed import Money
+from django.core.exceptions import ValidationError
+
 class CommonSetUpPayments(TestCase):
     def setUp(self):
         self.test_user = UserFactory()
@@ -80,12 +83,14 @@ class TestMarketModels(CommonSetUpPayments):
         self.test_product_1 = Product.objects.create(
             title='test_product_1',
             category=self.test_category,
-            tax=self.test_product_tax)
+            tax=self.test_product_tax,
+            price=Money('20', 'DKK'))
 
-        self.test_product_1 = Product.objects.create(
+        self.test_product_2 = Product.objects.create(
             title='test_product_2',
             category=self.test_category,
-            tax=self.test_product_tax)
+            tax=self.test_product_tax,
+            price=Money('20', 'SEK'))
 
         self.test_basket = Basket.objects.create(
             user=self.test_user)
@@ -129,3 +134,16 @@ class TestMarketModels(CommonSetUpPayments):
         self.test_basket.remove_from_items(product=self.test_product_1, quantity=1, delivery_date=None)
         basket_items = self.test_basket.items.filter(product=self.test_product_1, delivery_date=None)
         self.assertEqual(basket_items[0].quantity, 2)
+
+    def test_backet_get_total_amount(self):
+        self.assertEqual(self.test_basket.get_items_count(), 0)
+
+        self.test_basket.add_to_items(product=self.test_product_1, quantity=2, delivery_date=None)
+
+        total = self.test_basket.get_total_amount()
+
+        self.assertEqual(total, Decimal('40'))
+
+        with self.assertRaisesRegex(ValidationError, 'The products have different currencies'):
+            self.test_basket.add_to_items(product=self.test_product_2, quantity=2, delivery_date=None)
+            self.test_basket.get_total_amount()

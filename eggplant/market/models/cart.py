@@ -2,7 +2,9 @@ from decimal import Decimal
 
 from django.utils import timezone
 from django.db import models, transaction
-
+from .payment import Payment
+from django.db.models import Sum, F, Count
+from django.core.exceptions import ValidationError
 
 class BasketManager(models.Manager):
     def open_for_user(self, user):
@@ -39,10 +41,13 @@ class Basket(models.Model):
         return 'Basket {} {} {}'.format(self.user, self.status, self.created)
 
     def add_to_items(self, product=None, quantity=1, delivery_date=None):
-        current = self.items.filter(product=product,
-                                    delivery_date=delivery_date)
-        if current.exists():
-            current.update(quantity=models.F('quantity') + quantity)
+        # TODO: it should not be possible to add items with different currencies
+
+        current = self.items.filter(product=product, delivery_date=delivery_date).first()
+
+        if current:
+                current.quantity += quantity
+                current.save()
         else:
             BasketItem.objects.create(
                 basket=self,
@@ -53,33 +58,32 @@ class Basket(models.Model):
 
     def remove_from_items(self, product=None, quantity=1, delivery_date=None):
         current = self.items.filter(product=product,
-                                    delivery_date=delivery_date)
-        if current.exists():
-            if current[0].quantity - quantity > 1:
-                current.update(quantity=models.F('quantity') - quantity)
+                                    delivery_date=delivery_date).first()
+        if current:
+            if current.quantity - quantity > 1:
+                current.quantity -= quantity
+                current.save()
             else:
                 self.items.filter(basket=self, product=product, delivery_date=delivery_date).delete()
 
     def get_total_amount(self):
-        # TODO: This should return a Money type instead of decimal
-        # TODO: When calculating this, we should fail when currencies differ
-        total = Decimal('0')
-        for item in self.items.all():
-            total += item.quantity * item.product.price.amount
-        return total
+
+        # sanity check for the currencies
+        if 1 != self.items.all().values('product__price_currency').annotate(total=Count('product__price_currency')).count():
+            raise ValidationError('The products have different currencies')
+
+        return self.items.all().aggregate(total=Sum(F('product__price') * F('quantity')))['total']
 
     def get_items_count(self):
         return self.items.all().count()
 
     @transaction.atomic
     def do_checkout(self):
-        # TODO: Why on earth are we importing this here
-        from .payment import Payment
         Payment.objects.create(
             amount=self.get_total_amount(),
             user=self.user,
+            basket=self
         )
-        # self.order = payment
         self.status = self.CHECKEDOUT
         self.save()
 
