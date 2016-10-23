@@ -83,7 +83,8 @@ class Basket(models.Model):
     def do_checkout(self):
         Payment.objects.create(
             amount=self.get_total_amount(),
-            user=self.user,
+            # FIXME: get valid account
+            account=None,
             basket=self
         )
         self.status = self.CHECKEDOUT
