@@ -29,7 +29,7 @@ $jq(function() {
     <table class="basket">
         <tr>
             <th>
-                {% trans 'Amount' %}
+                {% trans '#' %}
             </th>
             <th>
                 {% trans 'Product' %}
@@ -57,13 +57,21 @@ $jq(function() {
                 </td>
             </tr>
         {% endfor %}
+        <tr>
+            <th>
+                {% trans 'Total' %}
+            </th>
+            <th class="price">
+                {{basket.get_total_amount}} {{basket_items.0.product.price_currency}}
+            </th>
+        </tr>
     </table>
-		<a class="btn btn-primary" href="{% url 'eggplant:market:checkout' %}">
-			{% trans 'Go to checkout' %}
-		</a>
-  	<a class="btn btn-primary" href="{% url 'eggplant:market:cart_details' %}">
-			{% trans 'Your basket' %}
-		</a>
+	<a class="btn btn-primary" href="{% url 'eggplant:market:checkout' %}">
+		{% trans 'Go to checkout' %}
+	</a>
+	    <a class="btn btn-primary" href="{% url 'eggplant:market:cart_details' %}">
+		{% trans 'Your basket' %}
+	</a>
     {% endif %}
 
 {% endblock %}
