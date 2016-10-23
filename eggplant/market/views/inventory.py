@@ -16,7 +16,7 @@ log = logging.getLogger(__name__)
 @login_required
 def market_home(request, category_id=None):
     default_filters = dict(enabled=True)
-    queryset = Product.objects.filter(**default_filters)
+    queryset = Product.objects.filter(**default_filters).exclude(stock=0)
     product_filter = ProductFilter(request.GET, queryset=queryset)
     categories = ProductCategory.objects.filter(enabled=True)
     basket = Basket.objects.open_for_user(request.user)
