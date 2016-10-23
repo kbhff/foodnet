@@ -1,10 +1,8 @@
+import getpaid
 from django.core.urlresolvers import reverse
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
-
 from djmoney.models.fields import MoneyField
-
-import getpaid
 
 
 class Payment(models.Model):

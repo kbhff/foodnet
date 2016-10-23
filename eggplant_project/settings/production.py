@@ -1,5 +1,5 @@
 import dj_database_url
-from .base import *  # @UnusedWildImport
+from .base import *  # @UnusedWildImport # NOQA
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG

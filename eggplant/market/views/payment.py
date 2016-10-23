@@ -1,15 +1,14 @@
 import logging
 
 from django.contrib import messages
-from django.utils.translation import ugettext as _
-from django.views.generic.detail import DetailView
-from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import get_object_or_404, redirect, render
-
+from django.utils.decorators import method_decorator
+from django.utils.translation import ugettext as _
+from django.views.generic.detail import DetailView
+from eggplant.core.views import LoginRequiredMixin
 from getpaid.forms import PaymentMethodForm
 
-from eggplant.core.views import LoginRequiredMixin
 from ..models import Payment
 
 log = logging.getLogger(__name__)
@@ -57,7 +56,7 @@ payment_detail = PaymentView.as_view()
 
 
 def payment_accepted(request, pk=None):
-    __ = get_object_or_404(Payment, pk=pk, account__user_profiles=request.user.profile)
+    get_object_or_404(Payment, pk=pk, account__user_profiles=request.user.profile)
     messages.info(request, _("Your payment has been accepted and"
                              " it's being processed."))
     return redirect('eggplant:market:payments_list')
@@ -65,6 +64,6 @@ def payment_accepted(request, pk=None):
 
 @login_required
 def payment_rejected(request, pk=None):
-    __ = get_object_or_404(Payment, pk=pk, account__user_profiles=request.user.profile)
+    get_object_or_404(Payment, pk=pk, account__user_profiles=request.user.profile)
     messages.error(request, _("Your payment has been cancelled."))
     return redirect("eggplant:market:payments_list")

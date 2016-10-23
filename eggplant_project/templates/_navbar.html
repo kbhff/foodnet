@@ -10,7 +10,7 @@
                     class="eggplant-logo">
             </a>
         </div>
-        
+
         <ul class="nav navbar-nav">
             {% if perms.membership.can_invite %}
             <li>
@@ -19,7 +19,7 @@
               </a>
             </li>
             {% endif %}
-            
+
             {% if user.is_authenticated %}
             <li>
               <a href="{% url 'eggplant:market:market_home' %}">
@@ -32,7 +32,7 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown">
                     <a data-toggle="dropdown"
-                        class="dropdown-toggle" 
+                        class="dropdown-toggle"
                         href="#"
                         aria-expanded="true">
                         {% if user.is_authenticated %}

@@ -4,16 +4,15 @@ from allauth.account.models import EmailAddress
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import authenticate, login
-from django.contrib.auth.decorators import permission_required, login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from django.db import transaction
-from django.shortcuts import redirect, get_object_or_404, render
-
+from django.shortcuts import get_object_or_404, redirect, render
 from eggplant.accounts.models import Account
+from eggplant.invitations.forms import (AcceptInvitationForm,
+                                        DepartmentInvitationForm)
 from eggplant.invitations.models import DepartmentInvitation
-from eggplant.invitations.forms import AcceptInvitationForm, \
-    DepartmentInvitationForm
 from eggplant.invitations.utils import create_verified_user
 
 logger = logging.getLogger(__name__)
@@ -50,7 +49,9 @@ def do_accept_invitation(request, invitation):
     return user
 
 
-def accept_invitation(request, verification_key):
+# TODO: Fails McCabe test, C901 'accept_invitation' is too complex (11)
+# Refactor into FormView
+def accept_invitation(request, verification_key):  # NOQA
     """Accept invitation."""
     if request.user.is_authenticated():
         msg = "You are already logged-in"

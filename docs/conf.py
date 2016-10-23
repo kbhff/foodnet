@@ -13,8 +13,10 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
-import sys
 import os
+import sys
+
+import django
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
@@ -29,16 +31,19 @@ sys.path.insert(0, os.path.abspath('..'))
 
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "eggplant_project.settings.docs")
 
-import django
 django.setup()
 
 
+# These imports are dependent on Django's settings stack and need to be AFTER
+# django.setup()
+from django.db.models.fields.files import FileDescriptor  # noqa
+from djmoney.models.fields import MoneyFieldProxy  # noqa
+import eggplant  # noqa
+
 # Hacks for the autodoc introspector
 
-from django.db.models.fields.files import FileDescriptor
 FileDescriptor.__get__ = lambda self, *args, **kwargs: self
 
-from djmoney.models.fields import MoneyFieldProxy
 MoneyFieldProxy.__get__ = lambda self, *args, **kwargs: self
 
 
@@ -73,18 +78,12 @@ source_suffix = '.rst'
 # The master toctree document.
 master_doc = 'index'
 
-
-path = os.path.join(
-    os.path.split(
-        os.path.abspath(
-            os.path.dirname(__file__)
-        )
-    )[:-1]
-)[0]
+path = os.path.abspath(
+    os.path.dirname(os.path.dirname(__file__))
+)
 sys.path = [path] + sys.path
 sys.path = [os.path.join(path, 'dbbackup')] + sys.path
 
-import eggplant
 
 # General information about the project.
 project = 'Eggplant'

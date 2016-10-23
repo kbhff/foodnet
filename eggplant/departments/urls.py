@@ -1,6 +1,6 @@
 from django.conf.urls import url
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, \
-    DeleteView
+from django.views.generic import (CreateView, DeleteView, DetailView, ListView,
+                                  UpdateView)
 
 from .models import Department
 

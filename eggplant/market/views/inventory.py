@@ -2,13 +2,13 @@
 import logging
 
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.shortcuts import render
 
-from ..models.inventory import Product, ProductCategory
-from ..models.cart import Basket
 from ..filters import ProductFilter
 from ..forms import ProductForm
+from ..models.cart import Basket
+from ..models.inventory import Product, ProductCategory
 
 log = logging.getLogger(__name__)
 

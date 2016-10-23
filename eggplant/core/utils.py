@@ -1,9 +1,10 @@
 import os
 import uuid
+from functools import wraps
 
 from django.conf import settings
-from django.core.urlresolvers import reverse
 from django.contrib.sites.models import Site
+from django.core.urlresolvers import reverse
 
 
 def absolute_url_reverse(url_name=None, **kwargs):
@@ -25,3 +26,16 @@ def generate_upload_path(instance, filename, dirname=None):
     if dirname:
         rand_name = "{}/{}".format(dirname, rand_name)
     return rand_name
+
+
+def disable_for_loaddata(signal_handler):
+    """
+    Decorator that turns off signal handlers when loading fixture data.
+    """
+
+    @wraps(signal_handler)
+    def wrapper(*args, **kwargs):
+        if kwargs.get('raw'):
+            return
+        signal_handler(*args, **kwargs)
+    return wrapper

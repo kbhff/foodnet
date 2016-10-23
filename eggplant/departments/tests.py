@@ -1,8 +1,7 @@
 from django.test import TestCase
-
 # Create your tests here.
-from eggplant.factories import DepartmentFactory, UserFactory, \
-    DepartmentAdministratorFactory, AccountFactory
+from eggplant.factories import (AccountFactory, DepartmentAdministratorFactory,
+                                DepartmentFactory, UserFactory)
 from eggplant.profiles.models import UserProfile
 
 

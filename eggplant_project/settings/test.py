@@ -2,8 +2,9 @@
 Default settings for testing
 USED BY TRAVIS
 """
-from .base import *  # @UnusedWildImport
 import sys
+
+from .base import *  # @UnusedWildImport # NOQA
 
 DEBUG = False
 

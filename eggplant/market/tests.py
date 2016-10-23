@@ -1,24 +1,15 @@
-from decimal import Decimal
 from datetime import date
+from decimal import Decimal
 
-from django.test import TestCase
-from django.core.urlresolvers import reverse
 from allauth.account.models import EmailAddress
-
+from django.core.urlresolvers import reverse
+from django.test import TestCase
+from eggplant.factories import AccountFactory, DepartmentFactory, UserFactory
+from eggplant.market.models.cart import Basket
+from eggplant.market.models.inventory import (Product, ProductCategory,
+                                              ProductTax)
 from eggplant.profiles.models import UserProfile
-from eggplant.factories import (
-    UserFactory,
-    AccountFactory,
-    DepartmentFactory,
-)
-from eggplant.market.models.inventory import (
-    Product,
-    ProductCategory,
-    ProductTax,
-)
-from eggplant.market.models.cart import(
-    Basket,
-)
+
 
 from moneyed import Money
 from django.core.exceptions import ValidationError

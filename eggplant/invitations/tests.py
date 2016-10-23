@@ -7,10 +7,9 @@ from django.core import mail
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from eggplant.accounts.models import Account
-
 from eggplant.core.utils import absolute_url_reverse
-from eggplant.factories import UserFactory, DepartmentFactory, \
-    AccountCategoryFactory, DepartmentInvitationFactory
+from eggplant.factories import (AccountCategoryFactory, DepartmentFactory,
+                                DepartmentInvitationFactory, UserFactory)
 from eggplant.profiles.models import UserProfile
 
 from .models import DepartmentInvitation

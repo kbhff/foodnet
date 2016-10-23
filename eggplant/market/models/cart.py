@@ -1,10 +1,12 @@
 from decimal import Decimal
 
-from django.utils import timezone
 from django.db import models, transaction
 from .payment import Payment
 from django.db.models import Sum, F, Count
 from django.core.exceptions import ValidationError
+
+from django.utils import timezone
+
 
 class BasketManager(models.Manager):
     def open_for_user(self, user):

@@ -1,8 +1,7 @@
 from django.views.generic import ListView
-
+from eggplant.core.views import LoginRequiredMixin
 from eggplant.departments.models import Department
 from eggplant.profiles.models import UserProfile
-from eggplant.core.views import LoginRequiredMixin
 
 
 class DepartmentProfiles(LoginRequiredMixin, ListView):

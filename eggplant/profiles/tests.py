@@ -1,13 +1,11 @@
 
-from django.core import mail
+from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
+from django.core import mail
 from django.core.urlresolvers import reverse
 from django.test import TestCase
-from allauth.account.models import EmailAddress
-
 # Create your tests here.
-from eggplant.factories import UserFactory, DepartmentFactory, \
-    AccountFactory
+from eggplant.factories import AccountFactory, DepartmentFactory, UserFactory
 from eggplant.profiles.models import UserProfile
 
 

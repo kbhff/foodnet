@@ -1,10 +1,9 @@
 from django.conf import settings
 from django.test import TestCase
-
+from django.test.client import RequestFactory
 from eggplant.core.utils import generate_upload_path
 
 from .context_processors import coop_vars
-from django.test.client import RequestFactory
 
 
 class UtilsTestCase(TestCase):

@@ -1,9 +1,8 @@
 from django import forms
 from django.forms import ModelForm
-from djmoney.settings import CURRENCY_CHOICES
+from eggplant.core.widgets import MoneyWidget
 
 from .models.inventory import Product
-from eggplant.core.widgets import MoneyWidget
 
 
 class BasketItemForm(forms.Form):

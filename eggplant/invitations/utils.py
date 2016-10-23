@@ -1,6 +1,5 @@
-from django.contrib.auth import get_user_model
-
 from allauth.account.models import EmailAddress, EmailConfirmation
+from django.contrib.auth import get_user_model
 
 
 def create_verified_user(invitation):

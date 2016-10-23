@@ -1,13 +1,12 @@
 # coding: utf8
-from django.conf import settings
-from django.db.models.signals import post_save
-from django.contrib.auth import get_user_model
 import factory
+from django.conf import settings
+from django.contrib.auth import get_user_model
+from django.db.models.signals import post_save
 
 
 class UserFactory(factory.DjangoModelFactory):
 
-    # TODO: what's the domain name food.net for?
     username = factory.Sequence(lambda n: 'user%d@food.net' % n)
 
     class Meta:
