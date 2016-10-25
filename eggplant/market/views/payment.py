@@ -16,7 +16,7 @@ log = logging.getLogger(__name__)
 
 @login_required
 def payment_list(request):
-    payments = Payment.objects.filter(account__user_profiles=request.user.profile).order_by('-created')
+    payments = Payment.objects.filter(user=request.user).order_by('-created')
     ctx = {
         'payments': payments
     }
@@ -25,12 +25,13 @@ def payment_list(request):
 
 @login_required
 def payment_info(request, pk=None):
-    payment = get_object_or_404(Payment, pk=pk, account__user_profiles=request.user.profile)
+    payment = get_object_or_404(Payment, pk=pk, user=request.user)
+    items = payment.items.all()
     ctx = {
-        'payments': [payment]
+        'payment': payment,
+        'items': items
     }
-    return render(request, 'eggplant/market/payment_list.html', ctx)
-
+    return render(request, 'eggplant/market/payment_info.html', ctx)
 
 class PaymentView(LoginRequiredMixin, DetailView):
     model = Payment

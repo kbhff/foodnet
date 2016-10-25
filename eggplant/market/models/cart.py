@@ -1,7 +1,7 @@
 from decimal import Decimal
 
 from django.db import models, transaction
-from .payment import Payment
+from .payment import Payment, PaymentItem
 from django.db.models import Sum, F, Count
 from django.core.exceptions import ValidationError
 
@@ -81,14 +81,25 @@ class Basket(models.Model):
 
     @transaction.atomic
     def do_checkout(self):
-        Payment.objects.create(
+        payment = Payment.objects.create(
             amount=self.get_total_amount(),
             # FIXME: get valid account
-            account=None,
+            user=self.user,
             basket=self
         )
         self.status = self.CHECKEDOUT
+
+        for item in self.items.all():
+            PaymentItem.objects.create(
+                payment=payment,
+                name=item.product.title,
+                price=item.product.price,
+                quantity=item.quantity,
+                delivery_date=item.delivery_date
+            )
+
         self.save()
+        return payment.id
 
 
 class BasketItem(models.Model):

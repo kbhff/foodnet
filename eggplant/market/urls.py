@@ -12,7 +12,7 @@ payment_patterns = [
 
     url(r'payment-info/(?P<pk>\d+)/$',
         payment.payment_info,
-        name="order_info"),
+        name="payment_info"),
 
     url(r'payment-accepted/(?P<pk>\d+)/$',
         payment.payment_accepted,

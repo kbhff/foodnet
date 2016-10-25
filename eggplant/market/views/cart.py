@@ -89,9 +89,9 @@ def checkout(request):
         return redirect('eggplant:market:market_home')
 
     if request.method == 'POST':
-        basket.do_checkout()
-        return redirect('eggplant:market:order_detail',
-                        pk=str(basket.order.id))
+        payment_id = basket.do_checkout()
+        return redirect('eggplant:market:payment_detail',
+                        pk=str(payment_id))
 
     ctx = {
         'basket': basket,
