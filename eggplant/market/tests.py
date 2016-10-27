@@ -133,7 +133,7 @@ class TestMarketModels(CommonSetUpPayments):
 
         total = self.test_basket.get_total_amount()
 
-        self.assertEqual(total, Decimal('40'))
+        self.assertEqual(total, Money(Decimal('40'), 'DKK'))
 
         with self.assertRaisesRegex(ValidationError, 'The products have different currencies'):
             self.test_basket.add_to_items(product=self.test_product_2, quantity=2, delivery_date=None)

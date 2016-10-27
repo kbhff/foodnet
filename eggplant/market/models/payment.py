@@ -19,12 +19,12 @@ class Payment(models.Model):
     UNPAID = 'unpaid'
     PAID_CASH = 'paid-cash'
     PAID_MOBILE = 'paid-mobile'
-    CANCELED = 'canceled'
+    CANCELLED = 'cancelled'
     STATUES = (
         (UNPAID, UNPAID),
         (PAID_CASH, PAID_CASH),
         (PAID_MOBILE, PAID_MOBILE),
-        (CANCELED, CANCELED),
+        (CANCELLED, CANCELLED),
     )
     status = models.CharField(choices=STATUES, default=UNPAID, max_length=15, null=True)
 

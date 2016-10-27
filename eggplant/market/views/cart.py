@@ -91,6 +91,7 @@ def checkout(request, pay_cash=True):
     if request.method == 'POST':
         if pay_cash is True:
             payment_id = basket.do_checkout()
+            # FIXME at this point a confirmation emial should be sent
             messages.success(request, 'Order successfully created!')
             return redirect('eggplant:market:payment_info', pk=payment_id)
         else:

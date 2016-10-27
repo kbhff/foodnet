@@ -2,9 +2,9 @@ from decimal import Decimal
 
 from django.db import models, transaction
 from .payment import Payment, PaymentItem
-from django.db.models import Sum, F, Count
+from django.db.models import Sum, F, Count, Max
 from django.core.exceptions import ValidationError
-
+from moneyed import Money
 from django.utils import timezone
 
 
@@ -70,11 +70,14 @@ class Basket(models.Model):
 
     def get_total_amount(self):
 
+        # FIXME this check should be removed, it is better to check for the currenices when an item is added
         # sanity check for the currencies
+
         if 1 != self.items.all().values('product__price_currency').annotate(total=Count('product__price_currency')).count():
             raise ValidationError('The products have different currencies')
 
-        return self.items.all().aggregate(total=Sum(F('product__price') * F('quantity')))['total']
+        total = self.items.all().aggregate(total=Sum(F('product__price') * F('quantity')), cur=Max('product__price_currency'))
+        return Money(total['total'], total['cur'])
 
     def get_items_count(self):
         return self.items.all().count()

@@ -16,9 +16,9 @@
       <thead>
         <tr>
             <th>Order id</th>
-            <th>creation date</th>
-            <th>payment status</th>
-            <th>total amount</th>
+            <th>Order date</th>
+            <th>Order status</th>
+            <th>Order amount</th>
             <th>Order Details</th>
         </tr>
     </thead>
@@ -26,7 +26,7 @@
 	{% for payment in payments %}
 		<tr>
 			<td>{{payment.id}}</td>
-			<td>{{payment.created|date:"d/m - Y"|default:"-"}}</td>
+			<td>{{payment.created|date:"DATETIME_FORMAT" |default:"-"}}</td>
 			<td>{{payment.status}}</td>
 			<td>{{payment.amount}}</td>
 			<td>
