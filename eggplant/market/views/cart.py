@@ -81,7 +81,7 @@ def cart_details(request):
 
 
 @login_required
-def checkout(request):
+def checkout(request, pay_cash=True):
     basket = get_object_or_404(Basket, user=request.user, status=Basket.OPEN)
 
     items = basket.items.all()
@@ -89,9 +89,13 @@ def checkout(request):
         return redirect('eggplant:market:market_home')
 
     if request.method == 'POST':
-        payment_id = basket.do_checkout()
-        return redirect('eggplant:market:payment_detail',
-                        pk=str(payment_id))
+        if pay_cash is True:
+            payment_id = basket.do_checkout()
+            messages.success(request, 'Order successfully created!')
+            return redirect('eggplant:market:payment_info', pk=payment_id)
+        else:
+            payment_id = basket.do_checkout()
+            return redirect('eggplant:market:payment_detail', pk=str(payment_id))
 
     ctx = {
         'basket': basket,

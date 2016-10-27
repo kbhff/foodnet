@@ -8,6 +8,7 @@ from django.utils.translation import ugettext as _
 from django.views.generic.detail import DetailView
 from eggplant.core.views import LoginRequiredMixin
 from getpaid.forms import PaymentMethodForm
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from ..models import Payment
 
@@ -16,7 +17,18 @@ log = logging.getLogger(__name__)
 
 @login_required
 def payment_list(request):
-    payments = Payment.objects.filter(user=request.user).order_by('-created')
+    payments_list = Payment.objects.filter(user=request.user).order_by('-created')
+
+    paginator = Paginator(payments_list, 25)
+
+    page = request.GET.get('page')
+    try:
+        payments = paginator.page(page)
+    except PageNotAnInteger:
+        payments = paginator.page(1)
+    except EmptyPage:
+        payments = paginator.page(paginator.num_pages)
+
     ctx = {
         'payments': payments
     }
@@ -43,7 +55,7 @@ class PaymentView(LoginRequiredMixin, DetailView):
         return super(PaymentView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
-        return Payment.objects.filter(account__user_profiles=self.request.user.profile)
+        return Payment.objects.filter(user=request.user)
 
     def get_context_data(self, **kwargs):
         context = super(PaymentView, self).get_context_data(**kwargs)

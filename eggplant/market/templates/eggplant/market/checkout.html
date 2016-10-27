@@ -37,16 +37,19 @@
 	</div>
 
 	<hr />
-
 	<div class="row">
 		<div class="col-md-12 text-left">
 		<p>The above is your order. Please look it through it includes the items
 		you want to buy. When you click "Go to payment" below, you will be sent
 		to a secure page at ePay.dk, where you will enter your payment information
 		and accept the payment.</p>
+{% comment %}
 		<p>We accept the following payment methods: Dankort, Visa/Dankort.</p>
+{% endcomment %}
+
 		</div>
 	</div>
+
 	<br />
 	<br />
 	<br />
@@ -57,7 +60,7 @@
 	<div class="col-md-5 text-right">
 		<form action="{% url 'eggplant:market:checkout' %}" method="POST">
 			{% csrf_token %}
-			<button name="submit" class="btn btn-success">Go to Payment</button>
+			<button name="submit" class="btn btn-info"  onclick="return confirm('Please confirm the Order?')">Pay Cash</button>
 		</form>
 	</div>
 	</div>

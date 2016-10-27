@@ -4,7 +4,7 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<h1 class="page-header">Your orders:</h1>
+		<h1 class="page-header">Order History:</h1>
 	</div>
 </div>
 
@@ -30,7 +30,7 @@
 			<td>{{payment.status}}</td>
 			<td>{{payment.amount}}</td>
 			<td>
-				<form action="{% url 'eggplant:market:payment_info' pk=payment.id %}" method="GET">
+				<form action="{% url 'eggplant:market:payment_info' pk=payment.id %}" >
 				{% csrf_token %}
 				<button name="submit" class="btn btn-success">Show full order</button>
 			</td>
@@ -42,6 +42,23 @@
 </div>
 </div>
 </div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if payments.has_previous %}
+            <a class="btn btn-success" href="?page={{ payments.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ payments.number }} of {{ payments.paginator.num_pages }}.
+        </span>
+
+        {% if payments.has_next %}
+            <a class="btn btn-success" href="?page={{ payments.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
 {% else %}
 	<div class="row">
 		<div class="col-md-5 col-span-4">You don't have any</div>
