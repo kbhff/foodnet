@@ -59,10 +59,10 @@ To quote Two Scoops of Django (1.8 version) that in turn quotes James Bennett
             
             ‘Write programs that do one thing and do it well.’
 
-    In essence, each app should be tightly focused on its task. If an app can’t
-    be explained in a single sentence of moderate length, or you need to say
-    ‘and’ more than once, it probably means the app is too big and should be
-    broken up.
+In essence, each app should be tightly focused on its task. If an app can’t
+be explained in a single sentence of moderate length, or you need to say
+‘and’ more than once, it probably means the app is too big and should be
+broken up.
 
 TODO
 ~~~~
