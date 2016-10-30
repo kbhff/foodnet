@@ -1,11 +1,11 @@
-from decimal import Decimal
+from django.conf import settings
 
-from django.db import models, transaction
-from .payment import Payment, PaymentItem
-from django.db.models import Sum, F, Count, Max
 from django.core.exceptions import ValidationError
-from moneyed import Money
+from django.db import models, transaction
 from django.utils import timezone
+from moneyed import Money
+
+from .payment import Payment, PaymentItem
 
 
 class BasketManager(models.Manager):
@@ -43,7 +43,14 @@ class Basket(models.Model):
         return 'Basket {} {} {}'.format(self.user, self.status, self.created)
 
     def add_to_items(self, product=None, quantity=1, delivery_date=None):
-        # TODO: it should not be possible to add items with different currencies
+
+        # sanity check
+        if self.status != self.OPEN:
+            return
+
+        currency = self.get_currency()
+        if currency and currency != product.price.currency:
+            raise ValidationError('The products have different currencies')
 
         current = self.items.filter(product=product, delivery_date=delivery_date).first()
 
@@ -59,6 +66,11 @@ class Basket(models.Model):
             )
 
     def remove_from_items(self, product=None, quantity=1, delivery_date=None):
+
+        # sanity check
+        if self.status != self.OPEN:
+            return
+
         current = self.items.filter(product=product,
                                     delivery_date=delivery_date).first()
         if current:
@@ -70,20 +82,32 @@ class Basket(models.Model):
 
     def get_total_amount(self):
 
-        # FIXME this check should be removed, it is better to check for the currenices when an item is added
-        # sanity check for the currencies
+        if self.get_items_count() == 0:
+            return Money(0, getattr(settings, 'DEFAULT_CURRENCY'))
 
-        if 1 != self.items.all().values('product__price_currency').annotate(total=Count('product__price_currency')).count():
-            raise ValidationError('The products have different currencies')
+        items = self.items.all().select_related('product')
 
-        total = self.items.all().aggregate(total=Sum(F('product__price') * F('quantity')), cur=Max('product__price_currency'))
-        return Money(total['total'], total['cur'])
+        total = items[0].product.price * items[0].quantity
+        for item in items[1:]:
+            total += item.product.price * item.quantity
+
+        return total
 
     def get_items_count(self):
         return self.items.all().count()
 
+    def get_currency(self):
+        item = self.items.first()
+        if item:
+            return item.product.price.currency
+        return None
+
     @transaction.atomic
     def do_checkout(self):
+        # sanity check
+        if self.status != self.OPEN:
+            return None
+
         payment = Payment.objects.create(
             amount=self.get_total_amount(),
             # FIXME: get valid account

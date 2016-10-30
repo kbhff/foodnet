@@ -2,13 +2,13 @@ import logging
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
 from django.views.generic.detail import DetailView
 from eggplant.core.views import LoginRequiredMixin
 from getpaid.forms import PaymentMethodForm
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from ..models import Payment
 
@@ -55,6 +55,8 @@ class PaymentView(LoginRequiredMixin, DetailView):
         return super(PaymentView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
+        # FIX ME: add proper request
+        request = None
         return Payment.objects.filter(user=request.user)
 
     def get_context_data(self, **kwargs):
