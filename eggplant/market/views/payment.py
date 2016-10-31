@@ -55,9 +55,7 @@ class PaymentView(LoginRequiredMixin, DetailView):
         return super(PaymentView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
-        # FIX ME: add proper request
-        request = None
-        return Payment.objects.filter(user=request.user)
+        return Payment.objects.filter(user=self.request.user)
 
     def get_context_data(self, **kwargs):
         context = super(PaymentView, self).get_context_data(**kwargs)

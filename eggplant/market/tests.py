@@ -2,6 +2,7 @@ from datetime import date
 from decimal import Decimal
 
 from allauth.account.models import EmailAddress
+from django.conf import settings
 from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.test import TestCase
@@ -133,11 +134,11 @@ class TestMarketModels(CommonSetUpPayments):
         with self.assertRaisesRegex(ValidationError, 'The products have different currencies'):
             self.test_basket.add_to_items(product=self.test_product_2, quantity=2, delivery_date=None)
 
-    def test_backet_get_total_amount(self):
+    def test_basket_get_total_amount(self):
         # empty basket test
         self.assertEqual(self.test_basket.get_items_count(), 0)
         total = self.test_basket.get_total_amount()
-        self.assertEqual(total, Money(Decimal('0'), 'DKK'))
+        self.assertEqual(total, Money(Decimal('0'), getattr(settings, 'DEFAULT_CURRENCY')))
 
         self.test_basket.add_to_items(product=self.test_product_1, quantity=2, delivery_date=None)
         total = self.test_basket.get_total_amount()
