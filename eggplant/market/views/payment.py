@@ -2,6 +2,7 @@ import logging
 
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import EmptyPage, PageNotAnInteger, Paginator
 from django.shortcuts import get_object_or_404, redirect, render
 from django.utils.decorators import method_decorator
 from django.utils.translation import ugettext as _
@@ -16,7 +17,18 @@ log = logging.getLogger(__name__)
 
 @login_required
 def payment_list(request):
-    payments = Payment.objects.filter(account__user_profiles=request.user.profile).order_by('-created')
+    payments_list = Payment.objects.filter(user=request.user).order_by('-created')
+
+    paginator = Paginator(payments_list, 25)
+
+    page = request.GET.get('page')
+    try:
+        payments = paginator.page(page)
+    except PageNotAnInteger:
+        payments = paginator.page(1)
+    except EmptyPage:
+        payments = paginator.page(paginator.num_pages)
+
     ctx = {
         'payments': payments
     }
@@ -25,12 +37,13 @@ def payment_list(request):
 
 @login_required
 def payment_info(request, pk=None):
-    payment = get_object_or_404(Payment, pk=pk, account__user_profiles=request.user.profile)
+    payment = get_object_or_404(Payment, pk=pk, user=request.user)
+    items = payment.items.all()
     ctx = {
-        'payments': [payment]
+        'payment': payment,
+        'items': items
     }
-    return render(request, 'eggplant/market/payment_list.html', ctx)
-
+    return render(request, 'eggplant/market/payment_info.html', ctx)
 
 class PaymentView(LoginRequiredMixin, DetailView):
     model = Payment
@@ -42,7 +55,7 @@ class PaymentView(LoginRequiredMixin, DetailView):
         return super(PaymentView, self).dispatch(request, *args, **kwargs)
 
     def get_queryset(self):
-        return Payment.objects.filter(account__user_profiles=self.request.user.profile)
+        return Payment.objects.filter(user=self.request.user)
 
     def get_context_data(self, **kwargs):
         context = super(PaymentView, self).get_context_data(**kwargs)

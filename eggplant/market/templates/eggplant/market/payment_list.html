@@ -4,30 +4,37 @@
 
 <div class="row">
 	<div class="col-sm-12">
-		<h1 class="page-header">Your payments:</h1>
+		<h1 class="page-header">Order History:</h1>
 	</div>
 </div>
 
-{% if orders %}
+{% if payments %}
 <div class="row">
 <div class="col-sm-12">
  <div class="table-responsive">
   <table class="table table-striped">
       <thead>
         <tr>
-            <th>name</th>
-            <th>total amount</th>
-            <th>payment status</th>
-            <th>creation date</th>
+            <th>Order id</th>
+            <th>Order date</th>
+            <th>Order status</th>
+            <th>Order amount</th>
+            <th>Order Details</th>
         </tr>
     </thead>
     <tbody>
-	{% for order in orders %}
+	{% for payment in payments %}
 		<tr>
-			<td>{{order.name}}</td>
-			<td>{{order.total}} {{order.currency}}</td>
-			<td>{{order.get_last_payment_status|default_if_none:"not created"}}</td>
-			<td>{{order.created}}</td>
+			<td>{{payment.id}}</td>
+			<td>{{payment.created|date:"DATETIME_FORMAT" |default:"-"}}</td>
+			<td>{{payment.status}}</td>
+			<td>{{payment.amount}}</td>
+			<td>
+				<form action="{% url 'eggplant:market:payment_info' pk=payment.id %}" >
+				{% csrf_token %}
+				<button name="submit" class="btn btn-success">Show full order</button>
+			</td>
+
 		</tr>
 	{% endfor %}
 	</tbody>
@@ -35,9 +42,31 @@
 </div>
 </div>
 </div>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if payments.has_previous %}
+            <a class="btn btn-success" href="?page={{ payments.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ payments.number }} of {{ payments.paginator.num_pages }}.
+        </span>
+
+        {% if payments.has_next %}
+            <a class="btn btn-success" href="?page={{ payments.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
+
 {% else %}
 	<div class="row">
 		<div class="col-md-5 col-span-4">You don't have any</div>
 	</div>
 {% endif %}
+<div class="row">
+	<div class="col-md-6 text-left">
+		<a class="btn btn-success" href="{% url 'eggplant:market:market_home' %}" >Go to Market</a>
+	</div>
+</div>
 {% endblock%}

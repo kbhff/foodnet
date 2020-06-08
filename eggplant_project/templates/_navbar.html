@@ -26,6 +26,12 @@
               {% trans "Market" %}</a>
             </li>
             {% endif %}
+            {% if user.is_authenticated %}
+            <li>
+              <a href="{% url 'eggplant:market:payment_list' %}">
+              {% trans "Order History" %}</a>
+            </li>
+            {% endif %}
         </ul>
 
         <div class="navbar-collapse collapse navbar-right" id="header-navbar-collapse">

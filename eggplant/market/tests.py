@@ -2,6 +2,8 @@ from datetime import date
 from decimal import Decimal
 
 from allauth.account.models import EmailAddress
+from django.conf import settings
+from django.core.exceptions import ValidationError
 from django.core.urlresolvers import reverse
 from django.test import TestCase
 from eggplant.factories import AccountFactory, DepartmentFactory, UserFactory
@@ -9,6 +11,7 @@ from eggplant.market.models.cart import Basket
 from eggplant.market.models.inventory import (Product, ProductCategory,
                                               ProductTax)
 from eggplant.profiles.models import UserProfile
+from moneyed import Money
 
 
 class CommonSetUpPayments(TestCase):
@@ -71,12 +74,14 @@ class TestMarketModels(CommonSetUpPayments):
         self.test_product_1 = Product.objects.create(
             title='test_product_1',
             category=self.test_category,
-            tax=self.test_product_tax)
+            tax=self.test_product_tax,
+            price=Money('20', 'DKK'))
 
-        self.test_product_1 = Product.objects.create(
+        self.test_product_2 = Product.objects.create(
             title='test_product_2',
             category=self.test_category,
-            tax=self.test_product_tax)
+            tax=self.test_product_tax,
+            price=Money('20', 'SEK'))
 
         self.test_basket = Basket.objects.create(
             user=self.test_user)
@@ -120,3 +125,34 @@ class TestMarketModels(CommonSetUpPayments):
         self.test_basket.remove_from_items(product=self.test_product_1, quantity=1, delivery_date=None)
         basket_items = self.test_basket.items.filter(product=self.test_product_1, delivery_date=None)
         self.assertEqual(basket_items[0].quantity, 2)
+
+    def test_add_procut_different_currencies(self):
+        self.assertEqual(self.test_basket.get_items_count(), 0)
+
+        self.test_basket.add_to_items(product=self.test_product_1, quantity=2, delivery_date=None)
+
+        with self.assertRaisesRegex(ValidationError, 'The products have different currencies'):
+            self.test_basket.add_to_items(product=self.test_product_2, quantity=2, delivery_date=None)
+
+    def test_basket_get_total_amount(self):
+        # empty basket test
+        self.assertEqual(self.test_basket.get_items_count(), 0)
+        total = self.test_basket.get_total_amount()
+        self.assertEqual(total, Money(Decimal('0'), getattr(settings, 'DEFAULT_CURRENCY')))
+
+        self.test_basket.add_to_items(product=self.test_product_1, quantity=2, delivery_date=None)
+        total = self.test_basket.get_total_amount()
+
+        self.assertEqual(total, Money(Decimal('40'), 'DKK'))
+
+        with self.assertRaisesRegex(ValidationError, 'The products have different currencies'):
+            self.test_basket.add_to_items(product=self.test_product_2, quantity=2, delivery_date=None)
+            self.test_basket.get_total_amount()
+
+    def test_backet_get_currency(self):
+        # empty basket has no currency
+        self.assertEqual(self.test_basket.get_currency(), None)
+
+        self.test_basket.add_to_items(product=self.test_product_1, quantity=2, delivery_date=None)
+
+        self.assertEqual(str(self.test_basket.get_currency()), 'DKK')
